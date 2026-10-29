@@ -1,0 +1,4321 @@
+{
+  "meta": {
+    "version": 1,
+    "defaultStartDate": "2026-11-05",
+    "defaultDailyHours": 3,
+    "planDays": 112,
+    "timezone": "Asia/Kolkata",
+    "reviewRule": "dayIndex % 7 == 3 (every 7th day, a Sunday for the default start)",
+    "mockDayIndexes": [
+      24,
+      45,
+      66,
+      87,
+      101,
+      108
+    ],
+    "redoOffsetsDays": [
+      1,
+      7,
+      30
+    ],
+    "counts": {
+      "topics": 25,
+      "problems": 252,
+      "easy": 58,
+      "medium": 162,
+      "hard": 32
+    },
+    "notes": "Difficulty labels follow LeetCode as of Oct 2026 and may change. URLs are built from titles; if one 404s, search the LC number. Importance scores (0-3) are a judgment-based synthesis, not official company data."
+  },
+  "topics": [
+    {
+      "id": "python-big-o-basic-logic",
+      "order": 1,
+      "name": "Python, Big-O & Basic Logic",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 3,
+        "tierB": 3,
+        "tierC": 1
+      },
+      "dailyFocus": [
+        "Python for DSA: list/dict/set/deque/heapq, sorted(key=), slicing, reading stdin; Big-O basics (O(1), O(log n), O(n), O(n log n), O(n^2))",
+        "Digit and loop logic; always dry-run on paper before coding"
+      ]
+    },
+    {
+      "id": "arrays-matrix",
+      "order": 2,
+      "name": "Arrays & Matrix",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 3,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "In-place array tricks: write pointer, swap, fill from the back",
+        "Kadane, prefix/suffix products, rotation by reversal, next permutation",
+        "Matrix traversal: spiral, rotate, set zeroes; first missing positive"
+      ]
+    },
+    {
+      "id": "strings",
+      "order": 3,
+      "name": "Strings",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 3,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "String basics: palindromes, reverse, subsequence, two pointers on strings",
+        "Substring problems: expand around center; string building",
+        "Parsing and simulation: reverse words, multiply strings, compression, zigzag"
+      ]
+    },
+    {
+      "id": "hashing",
+      "order": 4,
+      "name": "Hashing",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 2,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "HashMap/HashSet basics: lookup, complement (Two Sum), duplicates",
+        "Frequency counting and anagrams (Counter, sorted key)",
+        "Hash + grouping and sequences: group anagrams, longest consecutive, sudoku sets",
+        "Design with hashing: O(1) structures, time-based map; hard: max points on a line"
+      ]
+    },
+    {
+      "id": "prefix-sum-subarrays",
+      "order": 5,
+      "name": "Prefix Sum & Subarrays",
+      "priority": "P2",
+      "phase": "1 Foundations",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 1,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Prefix sum + hashmap trick: sum(i..j) = P[j] - P[i-1]; range queries",
+        "Remainder/balance tricks (divisible by K, 0/1 as -1/+1), difference array, 2D prefix"
+      ]
+    },
+    {
+      "id": "two-pointers",
+      "order": 6,
+      "name": "Two Pointers",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 1,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Opposite-end pointers on sorted arrays (squares, parity, vowels, Two Sum II)",
+        "k-Sum family: sort + fix one + two pointers; skip duplicates; Dutch flag",
+        "Container with most water and trapping rain water: why moving the smaller side works"
+      ]
+    },
+    {
+      "id": "sliding-window",
+      "order": 7,
+      "name": "Sliding Window",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 1,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Fixed-size window: running sum, set of last k",
+        "Variable window (expand right, shrink left): longest / shortest satisfying a condition",
+        "Window + hashmap: permutation, anagrams, replacement trick",
+        "At-most-K trick, windows with one deletion, minimum window substring"
+      ]
+    },
+    {
+      "id": "binary-search",
+      "order": 8,
+      "name": "Binary Search",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 2,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Classic template (lo/hi/mid), lower/upper bound, insert position, sqrt",
+        "Rotated sorted array, peak element, 2D matrix, single element in sorted array",
+        "Binary search on the ANSWER (Koko, ship capacity): monotonic feasibility check",
+        "Hard: partition-based median of two sorted arrays; split array largest sum"
+      ]
+    },
+    {
+      "id": "sorting-intervals",
+      "order": 9,
+      "name": "Sorting & Intervals",
+      "priority": "P1",
+      "phase": "1 Foundations",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 2,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Sorting ideas (merge sort, quick sort), custom comparators, Python key=",
+        "Merge / insert intervals; sort by start vs by end",
+        "Greedy on intervals: non-overlapping, arrows; custom sort (largest number)"
+      ]
+    },
+    {
+      "id": "linked-list",
+      "order": 10,
+      "name": "Linked List",
+      "priority": "P1",
+      "phase": "2 Core structures",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 2,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Pointer basics: reverse list, merge two lists, dummy node",
+        "Fast and slow pointers: cycle, middle, cycle start",
+        "Remove nth from end, reorder list, add two numbers, find duplicate (Floyd)",
+        "Pointer surgery: copy random pointer, sort list (merge sort), reverse k-group"
+      ]
+    },
+    {
+      "id": "stack-queue",
+      "order": 11,
+      "name": "Stack & Queue",
+      "priority": "P1",
+      "phase": "2 Core structures",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 2,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Stack basics: bracket matching, min stack, queue using stacks",
+        "Expression evaluation, car fleet, decode string",
+        "Monotonic stack: next greater element, daily temperatures, stock span",
+        "Monotonic stack / deque (hard): largest rectangle in histogram, sliding window maximum"
+      ]
+    },
+    {
+      "id": "recursion-backtracking",
+      "order": 12,
+      "name": "Recursion & Backtracking",
+      "priority": "P2",
+      "phase": "2 Core structures",
+      "plannedDays": 5,
+      "importance": {
+        "tierA": 1,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Recursion thinking: base case, recursion tree, call stack (Fibonacci, power of two)",
+        "Subsets and permutations template: choose / explore / un-choose",
+        "Combination sum family; handling duplicates by sorting and skipping",
+        "Grid and string backtracking: word search, palindrome partitioning, phone letters",
+        "Hard backtracking with pruning: N-Queens, Sudoku solver"
+      ]
+    },
+    {
+      "id": "trees-bst",
+      "order": 13,
+      "name": "Trees & BST",
+      "priority": "P1",
+      "phase": "2 Core structures",
+      "plannedDays": 7,
+      "importance": {
+        "tierA": 1,
+        "tierB": 3,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Binary tree basics: DFS recursion (depth, same tree, invert, symmetric)",
+        "Height-based recursion (diameter, balanced) + start of BFS level order",
+        "BFS variants (zigzag) + BST properties: validate BST, kth smallest",
+        "BST operations: LCA of BST, delete node, insert node",
+        "LCA of a binary tree, path sum II and III",
+        "Good nodes, construct tree from traversals, flatten to linked list",
+        "Hard trees: max path sum, serialize/deserialize, vertical order"
+      ]
+    },
+    {
+      "id": "heap-priority-queue",
+      "order": 14,
+      "name": "Heap / Priority Queue",
+      "priority": "P2",
+      "phase": "2 Core structures",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 0,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Heap basics (heapq): kth largest, K closest points, frequency sort",
+        "Heap + greedy / scheduling: task scheduler, reorganize string, kth in sorted matrix",
+        "Two heaps and K-way merge: median from data stream, merge k lists, design twitter"
+      ]
+    },
+    {
+      "id": "greedy",
+      "order": 15,
+      "name": "Greedy",
+      "priority": "P2",
+      "phase": "2 Core structures",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 1,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Greedy choice property: assign cookies, jump game I and II",
+        "Gas station, partition labels, hand of straights",
+        "Valid parenthesis string, candy; proving greedy vs finding counter-examples"
+      ]
+    },
+    {
+      "id": "graphs-bfs-dfs-grids",
+      "order": 16,
+      "name": "Graphs: BFS / DFS & Grids",
+      "priority": "P2",
+      "phase": "3 Graphs",
+      "plannedDays": 5,
+      "importance": {
+        "tierA": 0,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Graph representation (adjacency list), DFS/BFS templates, visited set; flood fill, islands",
+        "Grid graphs: max area of island, multi-source BFS (rotting oranges), boundary DFS (surrounded regions)",
+        "Pacific-Atlantic, connected components (provinces), bipartite check",
+        "All paths in a DAG, clone graph (DFS with map)",
+        "Shortest path in an unweighted graph: binary matrix, Word Ladder"
+      ]
+    },
+    {
+      "id": "graphs-topo-sort-union-find",
+      "order": 17,
+      "name": "Graphs: Topo Sort & Union-Find",
+      "priority": "P3",
+      "phase": "3 Graphs",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 0,
+        "tierB": 1,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Topological sort: Kahn's algorithm (BFS) and DFS; Course Schedule I and II",
+        "Union-Find (DSU) with path compression: redundant connection, network connectivity",
+        "DSU applications: accounts merge, equality equations",
+        "Hard: longest increasing path (DFS + memo), largest component by common factor"
+      ]
+    },
+    {
+      "id": "graphs-shortest-path-mst",
+      "order": 18,
+      "name": "Graphs: Shortest Path & MST",
+      "priority": "P3",
+      "phase": "3 Graphs",
+      "plannedDays": 3,
+      "importance": {
+        "tierA": 0,
+        "tierB": 1,
+        "tierC": 2
+      },
+      "dailyFocus": [
+        "Dijkstra with a heap + K-stops variant (Bellman-Ford style): network delay, max probability, cheapest flights",
+        "Min effort path (Dijkstra on grid); MST with Kruskal/Prim: min cost to connect points",
+        "Hard: reconstruct itinerary (Euler path), swim in rising water"
+      ]
+    },
+    {
+      "id": "trie",
+      "order": 19,
+      "name": "Trie",
+      "priority": "P3",
+      "phase": "3 Graphs",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 0,
+        "tierB": 1,
+        "tierC": 2
+      },
+      "dailyFocus": [
+        "Trie insert / search / startsWith; replace words",
+        "Trie + DFS: add and search words (wildcard), Word Search II"
+      ]
+    },
+    {
+      "id": "dp-1d-grid",
+      "order": 20,
+      "name": "DP: 1D & Grid",
+      "priority": "P2",
+      "phase": "4 Dynamic Programming",
+      "plannedDays": 5,
+      "importance": {
+        "tierA": 1,
+        "tierB": 2,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "DP mindset: recursion, then memo, then table, then space optimisation (Fibonacci family)",
+        "Linear DP: house robber I and II, decode ways",
+        "Unbounded / coin DP: coin change, word break",
+        "Grid DP: unique paths, minimum path sum",
+        "Maximum product subarray (track max and min); hard: dungeon game"
+      ]
+    },
+    {
+      "id": "dp-knapsack-subsequences",
+      "order": 21,
+      "name": "DP: Knapsack & Subsequences",
+      "priority": "P3",
+      "phase": "4 Dynamic Programming",
+      "plannedDays": 5,
+      "importance": {
+        "tierA": 0,
+        "tierB": 1,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "0/1 knapsack: partition equal subset sum, target sum, ones and zeroes",
+        "Unbounded knapsack: coin change II, combination sum IV (loop order matters)",
+        "LIS (O(n^2) then O(n log n)) and LCS",
+        "State-machine DP (stock with cooldown) + Russian doll envelopes",
+        "Hard DP: stock IV, maximum profit in job scheduling"
+      ]
+    },
+    {
+      "id": "dp-strings-advanced",
+      "order": 22,
+      "name": "DP: Strings & Advanced",
+      "priority": "P3",
+      "phase": "4 Dynamic Programming",
+      "plannedDays": 4,
+      "importance": {
+        "tierA": 0,
+        "tierB": 0,
+        "tierC": 3
+      },
+      "dailyFocus": [
+        "Palindromic subsequence and repeated subarray (2D string DP)",
+        "Edit distance, interleaving string",
+        "Maximal square, minimum cost for tickets (grid / decision DP)",
+        "Hard: distinct subsequences, regular expression matching"
+      ]
+    },
+    {
+      "id": "bit-manipulation",
+      "order": 23,
+      "name": "Bit Manipulation",
+      "priority": "P2",
+      "phase": "5 Bits, Math, Design",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 1,
+        "tierB": 2,
+        "tierC": 2
+      },
+      "dailyFocus": [
+        "Bit basics: AND/OR/XOR, shifts, count set bits; single number with XOR",
+        "Harder bit tricks: add without +, single number II and III, divide two integers"
+      ]
+    },
+    {
+      "id": "math-number-theory",
+      "order": 24,
+      "name": "Math & Number Theory",
+      "priority": "P2",
+      "phase": "5 Bits, Math, Design",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 2,
+        "tierB": 2,
+        "tierC": 1
+      },
+      "dailyFocus": [
+        "Digits and parity: palindrome number, happy number, plus one",
+        "Fast exponentiation, sieve of Eratosthenes, trailing zeroes"
+      ]
+    },
+    {
+      "id": "design-lru-lfu",
+      "order": 25,
+      "name": "Design (LRU, LFU)",
+      "priority": "P3",
+      "phase": "5 Bits, Math, Design",
+      "plannedDays": 2,
+      "importance": {
+        "tierA": 0,
+        "tierB": 1,
+        "tierC": 2
+      },
+      "dailyFocus": [
+        "LRU cache (hash map + doubly linked list), circular queue",
+        "Browser history; LFU cache"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "lcNumber": 1480,
+      "order": 1,
+      "title": "Running Sum of 1d Array",
+      "difficulty": "Easy",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Running total / prefix sum",
+      "url": "https://leetcode.com/problems/running-sum-of-1d-array/"
+    },
+    {
+      "lcNumber": 1295,
+      "order": 2,
+      "title": "Find Numbers with Even Number of Digits",
+      "difficulty": "Easy",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Digit counting with str() or //10",
+      "url": "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/"
+    },
+    {
+      "lcNumber": 1672,
+      "order": 3,
+      "title": "Richest Customer Wealth",
+      "difficulty": "Easy",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Row sums, take max",
+      "url": "https://leetcode.com/problems/richest-customer-wealth/"
+    },
+    {
+      "lcNumber": 412,
+      "order": 4,
+      "title": "Fizz Buzz",
+      "difficulty": "Easy",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Order of conditions (check 15 first)",
+      "url": "https://leetcode.com/problems/fizz-buzz/"
+    },
+    {
+      "lcNumber": 1342,
+      "order": 5,
+      "title": "Number of Steps to Reduce a Number to Zero",
+      "difficulty": "Easy",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Simulate; or think in bits",
+      "url": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/"
+    },
+    {
+      "lcNumber": 7,
+      "order": 6,
+      "title": "Reverse Integer",
+      "difficulty": "Medium",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Pop digit, push digit, check 32-bit overflow",
+      "url": "https://leetcode.com/problems/reverse-integer/"
+    },
+    {
+      "lcNumber": 8,
+      "order": 7,
+      "title": "String to Integer (atoi)",
+      "difficulty": "Medium",
+      "topicId": "python-big-o-basic-logic",
+      "keyIdea": "Parse in order: spaces, sign, digits, clamp",
+      "url": "https://leetcode.com/problems/string-to-integer-atoi/"
+    },
+    {
+      "lcNumber": 26,
+      "order": 8,
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Easy",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Slow/fast pointer overwrite",
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+    },
+    {
+      "lcNumber": 27,
+      "order": 9,
+      "title": "Remove Element",
+      "difficulty": "Easy",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Write pointer",
+      "url": "https://leetcode.com/problems/remove-element/"
+    },
+    {
+      "lcNumber": 88,
+      "order": 10,
+      "title": "Merge Sorted Array",
+      "difficulty": "Easy",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Fill from the back",
+      "url": "https://leetcode.com/problems/merge-sorted-array/"
+    },
+    {
+      "lcNumber": 283,
+      "order": 11,
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Stable partition with write pointer",
+      "url": "https://leetcode.com/problems/move-zeroes/"
+    },
+    {
+      "lcNumber": 121,
+      "order": 12,
+      "title": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Track min so far; best profit",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+    },
+    {
+      "lcNumber": 189,
+      "order": 13,
+      "title": "Rotate Array",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Reverse whole, then both parts",
+      "url": "https://leetcode.com/problems/rotate-array/"
+    },
+    {
+      "lcNumber": 238,
+      "order": 14,
+      "title": "Product of Array Except Self",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Prefix product x suffix product",
+      "url": "https://leetcode.com/problems/product-of-array-except-self/"
+    },
+    {
+      "lcNumber": 53,
+      "order": 15,
+      "title": "Maximum Subarray",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Kadane: extend or restart",
+      "url": "https://leetcode.com/problems/maximum-subarray/"
+    },
+    {
+      "lcNumber": 48,
+      "order": 16,
+      "title": "Rotate Image",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Transpose, then reverse rows",
+      "url": "https://leetcode.com/problems/rotate-image/"
+    },
+    {
+      "lcNumber": 54,
+      "order": 17,
+      "title": "Spiral Matrix",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Four shrinking boundaries",
+      "url": "https://leetcode.com/problems/spiral-matrix/"
+    },
+    {
+      "lcNumber": 73,
+      "order": 18,
+      "title": "Set Matrix Zeroes",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Use first row/col as markers",
+      "url": "https://leetcode.com/problems/set-matrix-zeroes/"
+    },
+    {
+      "lcNumber": 31,
+      "order": 19,
+      "title": "Next Permutation",
+      "difficulty": "Medium",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Find pivot, swap with next larger, reverse suffix",
+      "url": "https://leetcode.com/problems/next-permutation/"
+    },
+    {
+      "lcNumber": 41,
+      "order": 20,
+      "title": "First Missing Positive",
+      "difficulty": "Hard",
+      "topicId": "arrays-matrix",
+      "keyIdea": "Cyclic placement: put x at index x-1",
+      "url": "https://leetcode.com/problems/first-missing-positive/"
+    },
+    {
+      "lcNumber": 125,
+      "order": 21,
+      "title": "Valid Palindrome",
+      "difficulty": "Easy",
+      "topicId": "strings",
+      "keyIdea": "Two pointers skipping non-alphanumerics",
+      "url": "https://leetcode.com/problems/valid-palindrome/"
+    },
+    {
+      "lcNumber": 14,
+      "order": 22,
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "topicId": "strings",
+      "keyIdea": "Compare column by column",
+      "url": "https://leetcode.com/problems/longest-common-prefix/"
+    },
+    {
+      "lcNumber": 344,
+      "order": 23,
+      "title": "Reverse String",
+      "difficulty": "Easy",
+      "topicId": "strings",
+      "keyIdea": "Swap from both ends",
+      "url": "https://leetcode.com/problems/reverse-string/"
+    },
+    {
+      "lcNumber": 28,
+      "order": 24,
+      "title": "Find the Index of the First Occurrence in a String",
+      "difficulty": "Easy",
+      "topicId": "strings",
+      "keyIdea": "Sliding compare (KMP is the upgrade)",
+      "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+    },
+    {
+      "lcNumber": 392,
+      "order": 25,
+      "title": "Is Subsequence",
+      "difficulty": "Easy",
+      "topicId": "strings",
+      "keyIdea": "Two pointers",
+      "url": "https://leetcode.com/problems/is-subsequence/"
+    },
+    {
+      "lcNumber": 5,
+      "order": 26,
+      "title": "Longest Palindromic Substring",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "Expand around center",
+      "url": "https://leetcode.com/problems/longest-palindromic-substring/"
+    },
+    {
+      "lcNumber": 647,
+      "order": 27,
+      "title": "Palindromic Substrings",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "Expand around each center",
+      "url": "https://leetcode.com/problems/palindromic-substrings/"
+    },
+    {
+      "lcNumber": 151,
+      "order": 28,
+      "title": "Reverse Words in a String",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "split + reverse; or in-place",
+      "url": "https://leetcode.com/problems/reverse-words-in-a-string/"
+    },
+    {
+      "lcNumber": 6,
+      "order": 29,
+      "title": "Zigzag Conversion",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "Simulate rows with direction flip",
+      "url": "https://leetcode.com/problems/zigzag-conversion/"
+    },
+    {
+      "lcNumber": 43,
+      "order": 30,
+      "title": "Multiply Strings",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "Grade-school multiplication into digit array",
+      "url": "https://leetcode.com/problems/multiply-strings/"
+    },
+    {
+      "lcNumber": 443,
+      "order": 31,
+      "title": "String Compression",
+      "difficulty": "Medium",
+      "topicId": "strings",
+      "keyIdea": "Read/write pointers + run length",
+      "url": "https://leetcode.com/problems/string-compression/"
+    },
+    {
+      "lcNumber": 273,
+      "order": 32,
+      "title": "Integer to English Words",
+      "difficulty": "Hard",
+      "topicId": "strings",
+      "keyIdea": "Chunk by 1000, helper for <1000",
+      "url": "https://leetcode.com/problems/integer-to-english-words/"
+    },
+    {
+      "lcNumber": 1,
+      "order": 33,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topicId": "hashing",
+      "keyIdea": "Store complement in dict",
+      "url": "https://leetcode.com/problems/two-sum/"
+    },
+    {
+      "lcNumber": 217,
+      "order": 34,
+      "title": "Contains Duplicate",
+      "difficulty": "Easy",
+      "topicId": "hashing",
+      "keyIdea": "Set membership",
+      "url": "https://leetcode.com/problems/contains-duplicate/"
+    },
+    {
+      "lcNumber": 242,
+      "order": 35,
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "topicId": "hashing",
+      "keyIdea": "Counter equality",
+      "url": "https://leetcode.com/problems/valid-anagram/"
+    },
+    {
+      "lcNumber": 387,
+      "order": 36,
+      "title": "First Unique Character in a String",
+      "difficulty": "Easy",
+      "topicId": "hashing",
+      "keyIdea": "Frequency map, second pass",
+      "url": "https://leetcode.com/problems/first-unique-character-in-a-string/"
+    },
+    {
+      "lcNumber": 49,
+      "order": 37,
+      "title": "Group Anagrams",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Sorted string (or count tuple) as key",
+      "url": "https://leetcode.com/problems/group-anagrams/"
+    },
+    {
+      "lcNumber": 347,
+      "order": 38,
+      "title": "Top K Frequent Elements",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Counter + bucket sort / heap",
+      "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+    },
+    {
+      "lcNumber": 128,
+      "order": 39,
+      "title": "Longest Consecutive Sequence",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Set; start only at sequence starts",
+      "url": "https://leetcode.com/problems/longest-consecutive-sequence/"
+    },
+    {
+      "lcNumber": 36,
+      "order": 40,
+      "title": "Valid Sudoku",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Sets for rows, cols, boxes",
+      "url": "https://leetcode.com/problems/valid-sudoku/"
+    },
+    {
+      "lcNumber": 380,
+      "order": 41,
+      "title": "Insert Delete GetRandom O(1)",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Dict + list with swap-remove",
+      "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/"
+    },
+    {
+      "lcNumber": 454,
+      "order": 42,
+      "title": "4Sum II",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Hash pair sums of two halves",
+      "url": "https://leetcode.com/problems/4sum-ii/"
+    },
+    {
+      "lcNumber": 981,
+      "order": 43,
+      "title": "Time Based Key-Value Store",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Dict of lists + binary search",
+      "url": "https://leetcode.com/problems/time-based-key-value-store/"
+    },
+    {
+      "lcNumber": 535,
+      "order": 44,
+      "title": "Encode and Decode TinyURL",
+      "difficulty": "Medium",
+      "topicId": "hashing",
+      "keyIdea": "Two dicts / counter id",
+      "url": "https://leetcode.com/problems/encode-and-decode-tinyurl/"
+    },
+    {
+      "lcNumber": 149,
+      "order": 45,
+      "title": "Max Points on a Line",
+      "difficulty": "Hard",
+      "topicId": "hashing",
+      "keyIdea": "Slope as reduced fraction in dict",
+      "url": "https://leetcode.com/problems/max-points-on-a-line/"
+    },
+    {
+      "lcNumber": 303,
+      "order": 46,
+      "title": "Range Sum Query - Immutable",
+      "difficulty": "Easy",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Prefix array: P[r+1] - P[l]",
+      "url": "https://leetcode.com/problems/range-sum-query-immutable/"
+    },
+    {
+      "lcNumber": 560,
+      "order": 47,
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Prefix sum + dict of counts",
+      "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+    },
+    {
+      "lcNumber": 523,
+      "order": 48,
+      "title": "Continuous Subarray Sum",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Prefix mod k, first index in dict",
+      "url": "https://leetcode.com/problems/continuous-subarray-sum/"
+    },
+    {
+      "lcNumber": 525,
+      "order": 49,
+      "title": "Contiguous Array",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Map 0 to -1; equal prefix sums",
+      "url": "https://leetcode.com/problems/contiguous-array/"
+    },
+    {
+      "lcNumber": 974,
+      "order": 50,
+      "title": "Subarray Sums Divisible by K",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Count equal prefix remainders",
+      "url": "https://leetcode.com/problems/subarray-sums-divisible-by-k/"
+    },
+    {
+      "lcNumber": 1094,
+      "order": 51,
+      "title": "Car Pooling",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Difference array of passengers",
+      "url": "https://leetcode.com/problems/car-pooling/"
+    },
+    {
+      "lcNumber": 304,
+      "order": 52,
+      "title": "Range Sum Query 2D - Immutable",
+      "difficulty": "Medium",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "2D prefix, inclusion-exclusion",
+      "url": "https://leetcode.com/problems/range-sum-query-2d-immutable/"
+    },
+    {
+      "lcNumber": 862,
+      "order": 53,
+      "title": "Shortest Subarray with Sum at Least K",
+      "difficulty": "Hard",
+      "topicId": "prefix-sum-subarrays",
+      "keyIdea": "Prefix sums + monotonic deque",
+      "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/"
+    },
+    {
+      "lcNumber": 977,
+      "order": 54,
+      "title": "Squares of a Sorted Array",
+      "difficulty": "Easy",
+      "topicId": "two-pointers",
+      "keyIdea": "Two ends, fill result from back",
+      "url": "https://leetcode.com/problems/squares-of-a-sorted-array/"
+    },
+    {
+      "lcNumber": 905,
+      "order": 55,
+      "title": "Sort Array By Parity",
+      "difficulty": "Easy",
+      "topicId": "two-pointers",
+      "keyIdea": "Swap with two pointers",
+      "url": "https://leetcode.com/problems/sort-array-by-parity/"
+    },
+    {
+      "lcNumber": 345,
+      "order": 56,
+      "title": "Reverse Vowels of a String",
+      "difficulty": "Easy",
+      "topicId": "two-pointers",
+      "keyIdea": "Two pointers skipping consonants",
+      "url": "https://leetcode.com/problems/reverse-vowels-of-a-string/"
+    },
+    {
+      "lcNumber": 167,
+      "order": 57,
+      "title": "Two Sum II - Input Array Is Sorted",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Move left/right by comparing sum",
+      "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+    },
+    {
+      "lcNumber": 15,
+      "order": 58,
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Sort, fix i, two pointers, skip dups",
+      "url": "https://leetcode.com/problems/3sum/"
+    },
+    {
+      "lcNumber": 11,
+      "order": 59,
+      "title": "Container With Most Water",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Move the shorter wall",
+      "url": "https://leetcode.com/problems/container-with-most-water/"
+    },
+    {
+      "lcNumber": 75,
+      "order": 60,
+      "title": "Sort Colors",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Dutch national flag (3 pointers)",
+      "url": "https://leetcode.com/problems/sort-colors/"
+    },
+    {
+      "lcNumber": 16,
+      "order": 61,
+      "title": "3Sum Closest",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Sort + two pointers tracking diff",
+      "url": "https://leetcode.com/problems/3sum-closest/"
+    },
+    {
+      "lcNumber": 18,
+      "order": 62,
+      "title": "4Sum",
+      "difficulty": "Medium",
+      "topicId": "two-pointers",
+      "keyIdea": "Sort, two fixed + two pointers",
+      "url": "https://leetcode.com/problems/4sum/"
+    },
+    {
+      "lcNumber": 42,
+      "order": 63,
+      "title": "Trapping Rain Water",
+      "difficulty": "Hard",
+      "topicId": "two-pointers",
+      "keyIdea": "Left/right max with two pointers",
+      "url": "https://leetcode.com/problems/trapping-rain-water/"
+    },
+    {
+      "lcNumber": 643,
+      "order": 64,
+      "title": "Maximum Average Subarray I",
+      "difficulty": "Easy",
+      "topicId": "sliding-window",
+      "keyIdea": "Fixed window sum",
+      "url": "https://leetcode.com/problems/maximum-average-subarray-i/"
+    },
+    {
+      "lcNumber": 219,
+      "order": 65,
+      "title": "Contains Duplicate II",
+      "difficulty": "Easy",
+      "topicId": "sliding-window",
+      "keyIdea": "Window set of size k",
+      "url": "https://leetcode.com/problems/contains-duplicate-ii/"
+    },
+    {
+      "lcNumber": 3,
+      "order": 66,
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "Shrink until no duplicate",
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+    },
+    {
+      "lcNumber": 424,
+      "order": 67,
+      "title": "Longest Repeating Character Replacement",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "Valid if len - maxfreq <= k",
+      "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+    },
+    {
+      "lcNumber": 567,
+      "order": 68,
+      "title": "Permutation in String",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "Fixed window with count compare",
+      "url": "https://leetcode.com/problems/permutation-in-string/"
+    },
+    {
+      "lcNumber": 209,
+      "order": 69,
+      "title": "Minimum Size Subarray Sum",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "Shrink while sum >= target",
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+    },
+    {
+      "lcNumber": 1004,
+      "order": 70,
+      "title": "Max Consecutive Ones III",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "At most k zeros in window",
+      "url": "https://leetcode.com/problems/max-consecutive-ones-iii/"
+    },
+    {
+      "lcNumber": 438,
+      "order": 71,
+      "title": "Find All Anagrams in a String",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "Fixed window frequency match",
+      "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/"
+    },
+    {
+      "lcNumber": 904,
+      "order": 72,
+      "title": "Fruit Into Baskets",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "At most 2 distinct values",
+      "url": "https://leetcode.com/problems/fruit-into-baskets/"
+    },
+    {
+      "lcNumber": 1493,
+      "order": 73,
+      "title": "Longest Subarray of 1's After Deleting One Element",
+      "difficulty": "Medium",
+      "topicId": "sliding-window",
+      "keyIdea": "At most one zero in window",
+      "url": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/"
+    },
+    {
+      "lcNumber": 76,
+      "order": 74,
+      "title": "Minimum Window Substring",
+      "difficulty": "Hard",
+      "topicId": "sliding-window",
+      "keyIdea": "Expand to cover, shrink to minimize",
+      "url": "https://leetcode.com/problems/minimum-window-substring/"
+    },
+    {
+      "lcNumber": 704,
+      "order": 75,
+      "title": "Binary Search",
+      "difficulty": "Easy",
+      "topicId": "binary-search",
+      "keyIdea": "lo/hi/mid template",
+      "url": "https://leetcode.com/problems/binary-search/"
+    },
+    {
+      "lcNumber": 35,
+      "order": 76,
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "topicId": "binary-search",
+      "keyIdea": "Lower bound",
+      "url": "https://leetcode.com/problems/search-insert-position/"
+    },
+    {
+      "lcNumber": 69,
+      "order": 77,
+      "title": "Sqrt(x)",
+      "difficulty": "Easy",
+      "topicId": "binary-search",
+      "keyIdea": "Binary search on answer",
+      "url": "https://leetcode.com/problems/sqrtx/"
+    },
+    {
+      "lcNumber": 33,
+      "order": 78,
+      "title": "Search in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "One half is always sorted",
+      "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+    },
+    {
+      "lcNumber": 153,
+      "order": 79,
+      "title": "Find Minimum in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "Compare mid with right end",
+      "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+    },
+    {
+      "lcNumber": 34,
+      "order": 80,
+      "title": "Find First and Last Position of Element in Sorted Array",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "Lower bound and upper bound",
+      "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+    },
+    {
+      "lcNumber": 875,
+      "order": 81,
+      "title": "Koko Eating Bananas",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "BS on speed + feasibility check",
+      "url": "https://leetcode.com/problems/koko-eating-bananas/"
+    },
+    {
+      "lcNumber": 1011,
+      "order": 82,
+      "title": "Capacity To Ship Packages Within D Days",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "BS on capacity + greedy check",
+      "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/"
+    },
+    {
+      "lcNumber": 74,
+      "order": 83,
+      "title": "Search a 2D Matrix",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "Treat as flattened sorted array",
+      "url": "https://leetcode.com/problems/search-a-2d-matrix/"
+    },
+    {
+      "lcNumber": 162,
+      "order": 84,
+      "title": "Find Peak Element",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "Move toward the larger neighbour",
+      "url": "https://leetcode.com/problems/find-peak-element/"
+    },
+    {
+      "lcNumber": 540,
+      "order": 85,
+      "title": "Single Element in a Sorted Array",
+      "difficulty": "Medium",
+      "topicId": "binary-search",
+      "keyIdea": "Pair index parity",
+      "url": "https://leetcode.com/problems/single-element-in-a-sorted-array/"
+    },
+    {
+      "lcNumber": 4,
+      "order": 86,
+      "title": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "topicId": "binary-search",
+      "keyIdea": "Binary search the partition",
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+    },
+    {
+      "lcNumber": 410,
+      "order": 87,
+      "title": "Split Array Largest Sum",
+      "difficulty": "Hard",
+      "topicId": "binary-search",
+      "keyIdea": "BS on answer + greedy split count",
+      "url": "https://leetcode.com/problems/split-array-largest-sum/"
+    },
+    {
+      "lcNumber": 349,
+      "order": 88,
+      "title": "Intersection of Two Arrays",
+      "difficulty": "Easy",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Set intersection / sort + two pointers",
+      "url": "https://leetcode.com/problems/intersection-of-two-arrays/"
+    },
+    {
+      "lcNumber": 1122,
+      "order": 89,
+      "title": "Relative Sort Array",
+      "difficulty": "Easy",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Custom order via index map",
+      "url": "https://leetcode.com/problems/relative-sort-array/"
+    },
+    {
+      "lcNumber": 56,
+      "order": 90,
+      "title": "Merge Intervals",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Sort by start, extend end",
+      "url": "https://leetcode.com/problems/merge-intervals/"
+    },
+    {
+      "lcNumber": 57,
+      "order": 91,
+      "title": "Insert Interval",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Before / overlap / after",
+      "url": "https://leetcode.com/problems/insert-interval/"
+    },
+    {
+      "lcNumber": 435,
+      "order": 92,
+      "title": "Non-overlapping Intervals",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Sort by end, greedy keep",
+      "url": "https://leetcode.com/problems/non-overlapping-intervals/"
+    },
+    {
+      "lcNumber": 452,
+      "order": 93,
+      "title": "Minimum Number of Arrows to Burst Balloons",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Sort by end, shoot at end",
+      "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+    },
+    {
+      "lcNumber": 912,
+      "order": 94,
+      "title": "Sort an Array",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Merge sort / heap sort implementation",
+      "url": "https://leetcode.com/problems/sort-an-array/"
+    },
+    {
+      "lcNumber": 179,
+      "order": 95,
+      "title": "Largest Number",
+      "difficulty": "Medium",
+      "topicId": "sorting-intervals",
+      "keyIdea": "Custom comparator a+b vs b+a",
+      "url": "https://leetcode.com/problems/largest-number/"
+    },
+    {
+      "lcNumber": 206,
+      "order": 96,
+      "title": "Reverse Linked List",
+      "difficulty": "Easy",
+      "topicId": "linked-list",
+      "keyIdea": "prev/curr/next rewiring",
+      "url": "https://leetcode.com/problems/reverse-linked-list/"
+    },
+    {
+      "lcNumber": 21,
+      "order": 97,
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "topicId": "linked-list",
+      "keyIdea": "Dummy head + tail pointer",
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+    },
+    {
+      "lcNumber": 141,
+      "order": 98,
+      "title": "Linked List Cycle",
+      "difficulty": "Easy",
+      "topicId": "linked-list",
+      "keyIdea": "Fast and slow pointers",
+      "url": "https://leetcode.com/problems/linked-list-cycle/"
+    },
+    {
+      "lcNumber": 876,
+      "order": 99,
+      "title": "Middle of the Linked List",
+      "difficulty": "Easy",
+      "topicId": "linked-list",
+      "keyIdea": "Slow moves 1, fast moves 2",
+      "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+    },
+    {
+      "lcNumber": 142,
+      "order": 100,
+      "title": "Linked List Cycle II",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Reset one pointer to head after meeting",
+      "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+    },
+    {
+      "lcNumber": 19,
+      "order": 101,
+      "title": "Remove Nth Node From End of List",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Gap of n between two pointers",
+      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+    },
+    {
+      "lcNumber": 143,
+      "order": 102,
+      "title": "Reorder List",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Find middle, reverse half, merge",
+      "url": "https://leetcode.com/problems/reorder-list/"
+    },
+    {
+      "lcNumber": 2,
+      "order": 103,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Digit-by-digit with carry",
+      "url": "https://leetcode.com/problems/add-two-numbers/"
+    },
+    {
+      "lcNumber": 287,
+      "order": 104,
+      "title": "Find the Duplicate Number",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Treat array as linked list (Floyd)",
+      "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+    },
+    {
+      "lcNumber": 138,
+      "order": 105,
+      "title": "Copy List with Random Pointer",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Map old to new, or interleave nodes",
+      "url": "https://leetcode.com/problems/copy-list-with-random-pointer/"
+    },
+    {
+      "lcNumber": 148,
+      "order": 106,
+      "title": "Sort List",
+      "difficulty": "Medium",
+      "topicId": "linked-list",
+      "keyIdea": "Merge sort on list",
+      "url": "https://leetcode.com/problems/sort-list/"
+    },
+    {
+      "lcNumber": 25,
+      "order": 107,
+      "title": "Reverse Nodes in k-Group",
+      "difficulty": "Hard",
+      "topicId": "linked-list",
+      "keyIdea": "Reverse chunks, reconnect",
+      "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+    },
+    {
+      "lcNumber": 20,
+      "order": 108,
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "topicId": "stack-queue",
+      "keyIdea": "Stack of openers",
+      "url": "https://leetcode.com/problems/valid-parentheses/"
+    },
+    {
+      "lcNumber": 232,
+      "order": 109,
+      "title": "Implement Queue using Stacks",
+      "difficulty": "Easy",
+      "topicId": "stack-queue",
+      "keyIdea": "Two stacks, lazy transfer",
+      "url": "https://leetcode.com/problems/implement-queue-using-stacks/"
+    },
+    {
+      "lcNumber": 496,
+      "order": 110,
+      "title": "Next Greater Element I",
+      "difficulty": "Easy",
+      "topicId": "stack-queue",
+      "keyIdea": "Monotonic stack + map",
+      "url": "https://leetcode.com/problems/next-greater-element-i/"
+    },
+    {
+      "lcNumber": 155,
+      "order": 111,
+      "title": "Min Stack",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Store (value, min so far)",
+      "url": "https://leetcode.com/problems/min-stack/"
+    },
+    {
+      "lcNumber": 150,
+      "order": 112,
+      "title": "Evaluate Reverse Polish Notation",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Stack of operands",
+      "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+    },
+    {
+      "lcNumber": 739,
+      "order": 113,
+      "title": "Daily Temperatures",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Decreasing monotonic stack of indices",
+      "url": "https://leetcode.com/problems/daily-temperatures/"
+    },
+    {
+      "lcNumber": 853,
+      "order": 114,
+      "title": "Car Fleet",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Sort by position, compare arrival times",
+      "url": "https://leetcode.com/problems/car-fleet/"
+    },
+    {
+      "lcNumber": 503,
+      "order": 115,
+      "title": "Next Greater Element II",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Circular: iterate 2n",
+      "url": "https://leetcode.com/problems/next-greater-element-ii/"
+    },
+    {
+      "lcNumber": 394,
+      "order": 116,
+      "title": "Decode String",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Stack of (count, string)",
+      "url": "https://leetcode.com/problems/decode-string/"
+    },
+    {
+      "lcNumber": 901,
+      "order": 117,
+      "title": "Online Stock Span",
+      "difficulty": "Medium",
+      "topicId": "stack-queue",
+      "keyIdea": "Monotonic stack with span counts",
+      "url": "https://leetcode.com/problems/online-stock-span/"
+    },
+    {
+      "lcNumber": 84,
+      "order": 118,
+      "title": "Largest Rectangle in Histogram",
+      "difficulty": "Hard",
+      "topicId": "stack-queue",
+      "keyIdea": "Increasing stack; width at pop",
+      "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+    },
+    {
+      "lcNumber": 239,
+      "order": 119,
+      "title": "Sliding Window Maximum",
+      "difficulty": "Hard",
+      "topicId": "stack-queue",
+      "keyIdea": "Monotonic decreasing deque",
+      "url": "https://leetcode.com/problems/sliding-window-maximum/"
+    },
+    {
+      "lcNumber": 509,
+      "order": 120,
+      "title": "Fibonacci Number",
+      "difficulty": "Easy",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Recursion, then memo, then iterative",
+      "url": "https://leetcode.com/problems/fibonacci-number/"
+    },
+    {
+      "lcNumber": 231,
+      "order": 121,
+      "title": "Power of Two",
+      "difficulty": "Easy",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Recursion or n & (n-1)",
+      "url": "https://leetcode.com/problems/power-of-two/"
+    },
+    {
+      "lcNumber": 78,
+      "order": 122,
+      "title": "Subsets",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Include / exclude each element",
+      "url": "https://leetcode.com/problems/subsets/"
+    },
+    {
+      "lcNumber": 46,
+      "order": 123,
+      "title": "Permutations",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Choose unused, backtrack",
+      "url": "https://leetcode.com/problems/permutations/"
+    },
+    {
+      "lcNumber": 39,
+      "order": 124,
+      "title": "Combination Sum",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Reuse allowed: stay at same index",
+      "url": "https://leetcode.com/problems/combination-sum/"
+    },
+    {
+      "lcNumber": 40,
+      "order": 125,
+      "title": "Combination Sum II",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Sort + skip duplicates at same level",
+      "url": "https://leetcode.com/problems/combination-sum-ii/"
+    },
+    {
+      "lcNumber": 22,
+      "order": 126,
+      "title": "Generate Parentheses",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Track open/close counts",
+      "url": "https://leetcode.com/problems/generate-parentheses/"
+    },
+    {
+      "lcNumber": 131,
+      "order": 127,
+      "title": "Palindrome Partitioning",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Try every prefix that is a palindrome",
+      "url": "https://leetcode.com/problems/palindrome-partitioning/"
+    },
+    {
+      "lcNumber": 17,
+      "order": 128,
+      "title": "Letter Combinations of a Phone Number",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "One digit per recursion level",
+      "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+    },
+    {
+      "lcNumber": 79,
+      "order": 129,
+      "title": "Word Search",
+      "difficulty": "Medium",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "DFS with visited marking",
+      "url": "https://leetcode.com/problems/word-search/"
+    },
+    {
+      "lcNumber": 51,
+      "order": 130,
+      "title": "N-Queens",
+      "difficulty": "Hard",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Column/diagonal sets for pruning",
+      "url": "https://leetcode.com/problems/n-queens/"
+    },
+    {
+      "lcNumber": 37,
+      "order": 131,
+      "title": "Sudoku Solver",
+      "difficulty": "Hard",
+      "topicId": "recursion-backtracking",
+      "keyIdea": "Try digits with row/col/box sets",
+      "url": "https://leetcode.com/problems/sudoku-solver/"
+    },
+    {
+      "lcNumber": 104,
+      "order": 132,
+      "title": "Maximum Depth of Binary Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "1 + max(left, right)",
+      "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+    },
+    {
+      "lcNumber": 226,
+      "order": 133,
+      "title": "Invert Binary Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "Swap children recursively",
+      "url": "https://leetcode.com/problems/invert-binary-tree/"
+    },
+    {
+      "lcNumber": 100,
+      "order": 134,
+      "title": "Same Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "Compare structure and values together",
+      "url": "https://leetcode.com/problems/same-tree/"
+    },
+    {
+      "lcNumber": 101,
+      "order": 135,
+      "title": "Symmetric Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "Mirror compare (left.left vs right.right)",
+      "url": "https://leetcode.com/problems/symmetric-tree/"
+    },
+    {
+      "lcNumber": 543,
+      "order": 136,
+      "title": "Diameter of Binary Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "Height recursion + global best",
+      "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+    },
+    {
+      "lcNumber": 110,
+      "order": 137,
+      "title": "Balanced Binary Tree",
+      "difficulty": "Easy",
+      "topicId": "trees-bst",
+      "keyIdea": "Return height or -1 if unbalanced",
+      "url": "https://leetcode.com/problems/balanced-binary-tree/"
+    },
+    {
+      "lcNumber": 102,
+      "order": 138,
+      "title": "Binary Tree Level Order Traversal",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "BFS with level-size loop",
+      "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+    },
+    {
+      "lcNumber": 199,
+      "order": 139,
+      "title": "Binary Tree Right Side View",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Last node of each BFS level",
+      "url": "https://leetcode.com/problems/binary-tree-right-side-view/"
+    },
+    {
+      "lcNumber": 103,
+      "order": 140,
+      "title": "Binary Tree Zigzag Level Order Traversal",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "BFS + flip direction per level",
+      "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/"
+    },
+    {
+      "lcNumber": 98,
+      "order": 141,
+      "title": "Validate Binary Search Tree",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Pass (low, high) bounds down",
+      "url": "https://leetcode.com/problems/validate-binary-search-tree/"
+    },
+    {
+      "lcNumber": 230,
+      "order": 142,
+      "title": "Kth Smallest Element in a BST",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Inorder = sorted order",
+      "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+    },
+    {
+      "lcNumber": 235,
+      "order": 143,
+      "title": "Lowest Common Ancestor of a Binary Search Tree",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Go left/right using BST order",
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+    },
+    {
+      "lcNumber": 450,
+      "order": 144,
+      "title": "Delete Node in a BST",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Replace with inorder successor",
+      "url": "https://leetcode.com/problems/delete-node-in-a-bst/"
+    },
+    {
+      "lcNumber": 701,
+      "order": 145,
+      "title": "Insert into a Binary Search Tree",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Walk down and attach as leaf",
+      "url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/"
+    },
+    {
+      "lcNumber": 236,
+      "order": 146,
+      "title": "Lowest Common Ancestor of a Binary Tree",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Return node if found in both subtrees",
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+    },
+    {
+      "lcNumber": 113,
+      "order": 147,
+      "title": "Path Sum II",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "DFS carrying path list",
+      "url": "https://leetcode.com/problems/path-sum-ii/"
+    },
+    {
+      "lcNumber": 437,
+      "order": 148,
+      "title": "Path Sum III",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Prefix-sum map on root-to-node paths",
+      "url": "https://leetcode.com/problems/path-sum-iii/"
+    },
+    {
+      "lcNumber": 1448,
+      "order": 149,
+      "title": "Count Good Nodes in Binary Tree",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "DFS carrying max so far",
+      "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/"
+    },
+    {
+      "lcNumber": 105,
+      "order": 150,
+      "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Root from preorder; split by inorder index",
+      "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+    },
+    {
+      "lcNumber": 114,
+      "order": 151,
+      "title": "Flatten Binary Tree to Linked List",
+      "difficulty": "Medium",
+      "topicId": "trees-bst",
+      "keyIdea": "Reverse postorder or Morris-style",
+      "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
+    },
+    {
+      "lcNumber": 124,
+      "order": 152,
+      "title": "Binary Tree Maximum Path Sum",
+      "difficulty": "Hard",
+      "topicId": "trees-bst",
+      "keyIdea": "Height recursion; best = node + two gains",
+      "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+    },
+    {
+      "lcNumber": 297,
+      "order": 153,
+      "title": "Serialize and Deserialize Binary Tree",
+      "difficulty": "Hard",
+      "topicId": "trees-bst",
+      "keyIdea": "Preorder with null markers",
+      "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
+    },
+    {
+      "lcNumber": 987,
+      "order": 154,
+      "title": "Vertical Order Traversal of a Binary Tree",
+      "difficulty": "Hard",
+      "topicId": "trees-bst",
+      "keyIdea": "BFS with (col, row, val) then sort",
+      "url": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/"
+    },
+    {
+      "lcNumber": 703,
+      "order": 155,
+      "title": "Kth Largest Element in a Stream",
+      "difficulty": "Easy",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Min-heap of size k",
+      "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+    },
+    {
+      "lcNumber": 215,
+      "order": 156,
+      "title": "Kth Largest Element in an Array",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Min-heap size k / quickselect",
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+    },
+    {
+      "lcNumber": 973,
+      "order": 157,
+      "title": "K Closest Points to Origin",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Max-heap size k on distance",
+      "url": "https://leetcode.com/problems/k-closest-points-to-origin/"
+    },
+    {
+      "lcNumber": 451,
+      "order": 158,
+      "title": "Sort Characters By Frequency",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Counter + heap/sort",
+      "url": "https://leetcode.com/problems/sort-characters-by-frequency/"
+    },
+    {
+      "lcNumber": 621,
+      "order": 159,
+      "title": "Task Scheduler",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Max-heap + cooldown queue / formula",
+      "url": "https://leetcode.com/problems/task-scheduler/"
+    },
+    {
+      "lcNumber": 767,
+      "order": 160,
+      "title": "Reorganize String",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Always place most frequent available",
+      "url": "https://leetcode.com/problems/reorganize-string/"
+    },
+    {
+      "lcNumber": 378,
+      "order": 161,
+      "title": "Kth Smallest Element in a Sorted Matrix",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Heap of row heads / binary search",
+      "url": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/"
+    },
+    {
+      "lcNumber": 355,
+      "order": 162,
+      "title": "Design Twitter",
+      "difficulty": "Medium",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Merge k recent lists with heap",
+      "url": "https://leetcode.com/problems/design-twitter/"
+    },
+    {
+      "lcNumber": 295,
+      "order": 163,
+      "title": "Find Median from Data Stream",
+      "difficulty": "Hard",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Max-heap + min-heap",
+      "url": "https://leetcode.com/problems/find-median-from-data-stream/"
+    },
+    {
+      "lcNumber": 23,
+      "order": 164,
+      "title": "Merge k Sorted Lists",
+      "difficulty": "Hard",
+      "topicId": "heap-priority-queue",
+      "keyIdea": "Heap of list heads",
+      "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+    },
+    {
+      "lcNumber": 455,
+      "order": 165,
+      "title": "Assign Cookies",
+      "difficulty": "Easy",
+      "topicId": "greedy",
+      "keyIdea": "Sort both, greedily match",
+      "url": "https://leetcode.com/problems/assign-cookies/"
+    },
+    {
+      "lcNumber": 55,
+      "order": 166,
+      "title": "Jump Game",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "Track farthest reachable",
+      "url": "https://leetcode.com/problems/jump-game/"
+    },
+    {
+      "lcNumber": 45,
+      "order": 167,
+      "title": "Jump Game II",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "BFS-like window of reach",
+      "url": "https://leetcode.com/problems/jump-game-ii/"
+    },
+    {
+      "lcNumber": 134,
+      "order": 168,
+      "title": "Gas Station",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "If total >= 0, restart when tank < 0",
+      "url": "https://leetcode.com/problems/gas-station/"
+    },
+    {
+      "lcNumber": 763,
+      "order": 169,
+      "title": "Partition Labels",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "Last occurrence of each char",
+      "url": "https://leetcode.com/problems/partition-labels/"
+    },
+    {
+      "lcNumber": 846,
+      "order": 170,
+      "title": "Hand of Straights",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "Smallest card first with counter",
+      "url": "https://leetcode.com/problems/hand-of-straights/"
+    },
+    {
+      "lcNumber": 678,
+      "order": 171,
+      "title": "Valid Parenthesis String",
+      "difficulty": "Medium",
+      "topicId": "greedy",
+      "keyIdea": "Track range of open count",
+      "url": "https://leetcode.com/problems/valid-parenthesis-string/"
+    },
+    {
+      "lcNumber": 135,
+      "order": 172,
+      "title": "Candy",
+      "difficulty": "Hard",
+      "topicId": "greedy",
+      "keyIdea": "Two passes: left to right, right to left",
+      "url": "https://leetcode.com/problems/candy/"
+    },
+    {
+      "lcNumber": 733,
+      "order": 173,
+      "title": "Flood Fill",
+      "difficulty": "Easy",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "DFS/BFS from start cell",
+      "url": "https://leetcode.com/problems/flood-fill/"
+    },
+    {
+      "lcNumber": 463,
+      "order": 174,
+      "title": "Island Perimeter",
+      "difficulty": "Easy",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "Count land-water edges",
+      "url": "https://leetcode.com/problems/island-perimeter/"
+    },
+    {
+      "lcNumber": 200,
+      "order": 175,
+      "title": "Number of Islands",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "DFS/BFS flood each unseen land",
+      "url": "https://leetcode.com/problems/number-of-islands/"
+    },
+    {
+      "lcNumber": 695,
+      "order": 176,
+      "title": "Max Area of Island",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "DFS returning area",
+      "url": "https://leetcode.com/problems/max-area-of-island/"
+    },
+    {
+      "lcNumber": 994,
+      "order": 177,
+      "title": "Rotting Oranges",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "Multi-source BFS by minutes",
+      "url": "https://leetcode.com/problems/rotting-oranges/"
+    },
+    {
+      "lcNumber": 130,
+      "order": 178,
+      "title": "Surrounded Regions",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "Mark border-connected O first",
+      "url": "https://leetcode.com/problems/surrounded-regions/"
+    },
+    {
+      "lcNumber": 417,
+      "order": 179,
+      "title": "Pacific Atlantic Water Flow",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "BFS/DFS from both oceans, intersect",
+      "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/"
+    },
+    {
+      "lcNumber": 547,
+      "order": 180,
+      "title": "Number of Provinces",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "Count DFS components",
+      "url": "https://leetcode.com/problems/number-of-provinces/"
+    },
+    {
+      "lcNumber": 785,
+      "order": 181,
+      "title": "Is Graph Bipartite?",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "2-colour with BFS/DFS",
+      "url": "https://leetcode.com/problems/is-graph-bipartite/"
+    },
+    {
+      "lcNumber": 797,
+      "order": 182,
+      "title": "All Paths From Source to Target",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "DFS backtracking on DAG",
+      "url": "https://leetcode.com/problems/all-paths-from-source-to-target/"
+    },
+    {
+      "lcNumber": 133,
+      "order": 183,
+      "title": "Clone Graph",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "DFS + old to new map",
+      "url": "https://leetcode.com/problems/clone-graph/"
+    },
+    {
+      "lcNumber": 1091,
+      "order": 184,
+      "title": "Shortest Path in Binary Matrix",
+      "difficulty": "Medium",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "BFS over 8 directions",
+      "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
+    },
+    {
+      "lcNumber": 127,
+      "order": 185,
+      "title": "Word Ladder",
+      "difficulty": "Hard",
+      "topicId": "graphs-bfs-dfs-grids",
+      "keyIdea": "BFS over word transformations",
+      "url": "https://leetcode.com/problems/word-ladder/"
+    },
+    {
+      "lcNumber": 207,
+      "order": 186,
+      "title": "Course Schedule",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "Cycle detection via Kahn's algorithm",
+      "url": "https://leetcode.com/problems/course-schedule/"
+    },
+    {
+      "lcNumber": 210,
+      "order": 187,
+      "title": "Course Schedule II",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "Topological order output",
+      "url": "https://leetcode.com/problems/course-schedule-ii/"
+    },
+    {
+      "lcNumber": 684,
+      "order": 188,
+      "title": "Redundant Connection",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "DSU: edge joining same set",
+      "url": "https://leetcode.com/problems/redundant-connection/"
+    },
+    {
+      "lcNumber": 1319,
+      "order": 189,
+      "title": "Number of Operations to Make Network Connected",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "Components - 1 if enough edges",
+      "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/"
+    },
+    {
+      "lcNumber": 721,
+      "order": 190,
+      "title": "Accounts Merge",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "DSU on emails",
+      "url": "https://leetcode.com/problems/accounts-merge/"
+    },
+    {
+      "lcNumber": 990,
+      "order": 191,
+      "title": "Satisfiability of Equality Equations",
+      "difficulty": "Medium",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "Union '==' first, then check '!='",
+      "url": "https://leetcode.com/problems/satisfiability-of-equality-equations/"
+    },
+    {
+      "lcNumber": 329,
+      "order": 192,
+      "title": "Longest Increasing Path in a Matrix",
+      "difficulty": "Hard",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "DFS + memo (implicit DAG)",
+      "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/"
+    },
+    {
+      "lcNumber": 952,
+      "order": 193,
+      "title": "Largest Component Size by Common Factor",
+      "difficulty": "Hard",
+      "topicId": "graphs-topo-sort-union-find",
+      "keyIdea": "DSU over prime factors",
+      "url": "https://leetcode.com/problems/largest-component-size-by-common-factor/"
+    },
+    {
+      "lcNumber": 743,
+      "order": 194,
+      "title": "Network Delay Time",
+      "difficulty": "Medium",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Dijkstra from source; take max dist",
+      "url": "https://leetcode.com/problems/network-delay-time/"
+    },
+    {
+      "lcNumber": 1514,
+      "order": 195,
+      "title": "Path with Maximum Probability",
+      "difficulty": "Medium",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Dijkstra with max-heap on probability",
+      "url": "https://leetcode.com/problems/path-with-maximum-probability/"
+    },
+    {
+      "lcNumber": 787,
+      "order": 196,
+      "title": "Cheapest Flights Within K Stops",
+      "difficulty": "Medium",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Bellman-Ford K rounds / BFS levels",
+      "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+    },
+    {
+      "lcNumber": 1631,
+      "order": 197,
+      "title": "Path With Minimum Effort",
+      "difficulty": "Medium",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Dijkstra minimizing the max edge",
+      "url": "https://leetcode.com/problems/path-with-minimum-effort/"
+    },
+    {
+      "lcNumber": 1584,
+      "order": 198,
+      "title": "Min Cost to Connect All Points",
+      "difficulty": "Medium",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "MST: Kruskal or Prim",
+      "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/"
+    },
+    {
+      "lcNumber": 332,
+      "order": 199,
+      "title": "Reconstruct Itinerary",
+      "difficulty": "Hard",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Hierholzer's Euler path",
+      "url": "https://leetcode.com/problems/reconstruct-itinerary/"
+    },
+    {
+      "lcNumber": 778,
+      "order": 200,
+      "title": "Swim in Rising Water",
+      "difficulty": "Hard",
+      "topicId": "graphs-shortest-path-mst",
+      "keyIdea": "Dijkstra / binary search + BFS",
+      "url": "https://leetcode.com/problems/swim-in-rising-water/"
+    },
+    {
+      "lcNumber": 208,
+      "order": 201,
+      "title": "Implement Trie (Prefix Tree)",
+      "difficulty": "Medium",
+      "topicId": "trie",
+      "keyIdea": "Node with children dict + end flag",
+      "url": "https://leetcode.com/problems/implement-trie-prefix-tree/"
+    },
+    {
+      "lcNumber": 648,
+      "order": 202,
+      "title": "Replace Words",
+      "difficulty": "Medium",
+      "topicId": "trie",
+      "keyIdea": "Shortest prefix lookup in trie",
+      "url": "https://leetcode.com/problems/replace-words/"
+    },
+    {
+      "lcNumber": 211,
+      "order": 203,
+      "title": "Design Add and Search Words Data Structure",
+      "difficulty": "Medium",
+      "topicId": "trie",
+      "keyIdea": "DFS on '.' wildcard",
+      "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/"
+    },
+    {
+      "lcNumber": 212,
+      "order": 204,
+      "title": "Word Search II",
+      "difficulty": "Hard",
+      "topicId": "trie",
+      "keyIdea": "Trie + grid backtracking with pruning",
+      "url": "https://leetcode.com/problems/word-search-ii/"
+    },
+    {
+      "lcNumber": 70,
+      "order": 205,
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "dp[i] = dp[i-1] + dp[i-2]",
+      "url": "https://leetcode.com/problems/climbing-stairs/"
+    },
+    {
+      "lcNumber": 746,
+      "order": 206,
+      "title": "Min Cost Climbing Stairs",
+      "difficulty": "Easy",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Min of two previous states",
+      "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+    },
+    {
+      "lcNumber": 1137,
+      "order": 207,
+      "title": "N-th Tribonacci Number",
+      "difficulty": "Easy",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Three rolling variables",
+      "url": "https://leetcode.com/problems/n-th-tribonacci-number/"
+    },
+    {
+      "lcNumber": 198,
+      "order": 208,
+      "title": "House Robber",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Take or skip: max(dp[i-1], dp[i-2] + x)",
+      "url": "https://leetcode.com/problems/house-robber/"
+    },
+    {
+      "lcNumber": 213,
+      "order": 209,
+      "title": "House Robber II",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Two runs: skip first / skip last",
+      "url": "https://leetcode.com/problems/house-robber-ii/"
+    },
+    {
+      "lcNumber": 91,
+      "order": 210,
+      "title": "Decode Ways",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "1- and 2-digit validity transitions",
+      "url": "https://leetcode.com/problems/decode-ways/"
+    },
+    {
+      "lcNumber": 322,
+      "order": 211,
+      "title": "Coin Change",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "dp[a] = 1 + min(dp[a - c])",
+      "url": "https://leetcode.com/problems/coin-change/"
+    },
+    {
+      "lcNumber": 139,
+      "order": 212,
+      "title": "Word Break",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "dp[i] true if some word ends at i",
+      "url": "https://leetcode.com/problems/word-break/"
+    },
+    {
+      "lcNumber": 62,
+      "order": 213,
+      "title": "Unique Paths",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "dp[r][c] = up + left",
+      "url": "https://leetcode.com/problems/unique-paths/"
+    },
+    {
+      "lcNumber": 64,
+      "order": 214,
+      "title": "Minimum Path Sum",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "dp[r][c] = cell + min(up, left)",
+      "url": "https://leetcode.com/problems/minimum-path-sum/"
+    },
+    {
+      "lcNumber": 152,
+      "order": 215,
+      "title": "Maximum Product Subarray",
+      "difficulty": "Medium",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Track both max and min product",
+      "url": "https://leetcode.com/problems/maximum-product-subarray/"
+    },
+    {
+      "lcNumber": 174,
+      "order": 216,
+      "title": "Dungeon Game",
+      "difficulty": "Hard",
+      "topicId": "dp-1d-grid",
+      "keyIdea": "Fill DP backwards from the princess",
+      "url": "https://leetcode.com/problems/dungeon-game/"
+    },
+    {
+      "lcNumber": 416,
+      "order": 217,
+      "title": "Partition Equal Subset Sum",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "0/1 knapsack to total/2",
+      "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+    },
+    {
+      "lcNumber": 494,
+      "order": 218,
+      "title": "Target Sum",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "Subset-sum count: (total + target)/2",
+      "url": "https://leetcode.com/problems/target-sum/"
+    },
+    {
+      "lcNumber": 474,
+      "order": 219,
+      "title": "Ones and Zeroes",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "2D knapsack on (zeros, ones)",
+      "url": "https://leetcode.com/problems/ones-and-zeroes/"
+    },
+    {
+      "lcNumber": 518,
+      "order": 220,
+      "title": "Coin Change II",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "Unbounded knapsack: coins outer loop",
+      "url": "https://leetcode.com/problems/coin-change-ii/"
+    },
+    {
+      "lcNumber": 377,
+      "order": 221,
+      "title": "Combination Sum IV",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "Order matters: target outer loop",
+      "url": "https://leetcode.com/problems/combination-sum-iv/"
+    },
+    {
+      "lcNumber": 300,
+      "order": 222,
+      "title": "Longest Increasing Subsequence",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "O(n^2) dp, then patience sorting",
+      "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+    },
+    {
+      "lcNumber": 1143,
+      "order": 223,
+      "title": "Longest Common Subsequence",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "2D dp on match / skip",
+      "url": "https://leetcode.com/problems/longest-common-subsequence/"
+    },
+    {
+      "lcNumber": 309,
+      "order": 224,
+      "title": "Best Time to Buy and Sell Stock with Cooldown",
+      "difficulty": "Medium",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "State machine: hold / sold / rest",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/"
+    },
+    {
+      "lcNumber": 354,
+      "order": 225,
+      "title": "Russian Doll Envelopes",
+      "difficulty": "Hard",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "Sort by w asc, h desc; LIS on h",
+      "url": "https://leetcode.com/problems/russian-doll-envelopes/"
+    },
+    {
+      "lcNumber": 188,
+      "order": 226,
+      "title": "Best Time to Buy and Sell Stock IV",
+      "difficulty": "Hard",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "dp[k][day] with hold / free states",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/"
+    },
+    {
+      "lcNumber": 1235,
+      "order": 227,
+      "title": "Maximum Profit in Job Scheduling",
+      "difficulty": "Hard",
+      "topicId": "dp-knapsack-subsequences",
+      "keyIdea": "Sort by end, dp + binary search",
+      "url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/"
+    },
+    {
+      "lcNumber": 516,
+      "order": 228,
+      "title": "Longest Palindromic Subsequence",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "LCS of string and its reverse",
+      "url": "https://leetcode.com/problems/longest-palindromic-subsequence/"
+    },
+    {
+      "lcNumber": 718,
+      "order": 229,
+      "title": "Maximum Length of Repeated Subarray",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "dp[i][j] = dp[i-1][j-1] + 1 on match",
+      "url": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/"
+    },
+    {
+      "lcNumber": 72,
+      "order": 230,
+      "title": "Edit Distance",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "Insert / delete / replace transitions",
+      "url": "https://leetcode.com/problems/edit-distance/"
+    },
+    {
+      "lcNumber": 97,
+      "order": 231,
+      "title": "Interleaving String",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "dp[i][j] over prefixes of s1, s2",
+      "url": "https://leetcode.com/problems/interleaving-string/"
+    },
+    {
+      "lcNumber": 221,
+      "order": 232,
+      "title": "Maximal Square",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "min(up, left, diag) + 1",
+      "url": "https://leetcode.com/problems/maximal-square/"
+    },
+    {
+      "lcNumber": 983,
+      "order": 233,
+      "title": "Minimum Cost For Tickets",
+      "difficulty": "Medium",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "dp over days with 1/7/30 passes",
+      "url": "https://leetcode.com/problems/minimum-cost-for-tickets/"
+    },
+    {
+      "lcNumber": 115,
+      "order": 234,
+      "title": "Distinct Subsequences",
+      "difficulty": "Hard",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "dp[i][j] = skip + match",
+      "url": "https://leetcode.com/problems/distinct-subsequences/"
+    },
+    {
+      "lcNumber": 10,
+      "order": 235,
+      "title": "Regular Expression Matching",
+      "difficulty": "Hard",
+      "topicId": "dp-strings-advanced",
+      "keyIdea": "Handle '*' as zero or more of previous",
+      "url": "https://leetcode.com/problems/regular-expression-matching/"
+    },
+    {
+      "lcNumber": 136,
+      "order": 236,
+      "title": "Single Number",
+      "difficulty": "Easy",
+      "topicId": "bit-manipulation",
+      "keyIdea": "XOR cancels pairs",
+      "url": "https://leetcode.com/problems/single-number/"
+    },
+    {
+      "lcNumber": 191,
+      "order": 237,
+      "title": "Number of 1 Bits",
+      "difficulty": "Easy",
+      "topicId": "bit-manipulation",
+      "keyIdea": "n &= n-1 clears lowest set bit",
+      "url": "https://leetcode.com/problems/number-of-1-bits/"
+    },
+    {
+      "lcNumber": 338,
+      "order": 238,
+      "title": "Counting Bits",
+      "difficulty": "Easy",
+      "topicId": "bit-manipulation",
+      "keyIdea": "dp[i] = dp[i >> 1] + (i & 1)",
+      "url": "https://leetcode.com/problems/counting-bits/"
+    },
+    {
+      "lcNumber": 371,
+      "order": 239,
+      "title": "Sum of Two Integers",
+      "difficulty": "Medium",
+      "topicId": "bit-manipulation",
+      "keyIdea": "XOR = sum, (AND << 1) = carry",
+      "url": "https://leetcode.com/problems/sum-of-two-integers/"
+    },
+    {
+      "lcNumber": 137,
+      "order": 240,
+      "title": "Single Number II",
+      "difficulty": "Medium",
+      "topicId": "bit-manipulation",
+      "keyIdea": "Count each bit mod 3",
+      "url": "https://leetcode.com/problems/single-number-ii/"
+    },
+    {
+      "lcNumber": 260,
+      "order": 241,
+      "title": "Single Number III",
+      "difficulty": "Medium",
+      "topicId": "bit-manipulation",
+      "keyIdea": "XOR all, split by a set bit",
+      "url": "https://leetcode.com/problems/single-number-iii/"
+    },
+    {
+      "lcNumber": 29,
+      "order": 242,
+      "title": "Divide Two Integers",
+      "difficulty": "Medium",
+      "topicId": "bit-manipulation",
+      "keyIdea": "Shift-and-subtract",
+      "url": "https://leetcode.com/problems/divide-two-integers/"
+    },
+    {
+      "lcNumber": 9,
+      "order": 243,
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "topicId": "math-number-theory",
+      "keyIdea": "Reverse half the digits",
+      "url": "https://leetcode.com/problems/palindrome-number/"
+    },
+    {
+      "lcNumber": 202,
+      "order": 244,
+      "title": "Happy Number",
+      "difficulty": "Easy",
+      "topicId": "math-number-theory",
+      "keyIdea": "Cycle detection with set / Floyd",
+      "url": "https://leetcode.com/problems/happy-number/"
+    },
+    {
+      "lcNumber": 66,
+      "order": 245,
+      "title": "Plus One",
+      "difficulty": "Easy",
+      "topicId": "math-number-theory",
+      "keyIdea": "Carry from last digit",
+      "url": "https://leetcode.com/problems/plus-one/"
+    },
+    {
+      "lcNumber": 50,
+      "order": 246,
+      "title": "Pow(x, n)",
+      "difficulty": "Medium",
+      "topicId": "math-number-theory",
+      "keyIdea": "Fast exponentiation (square and halve)",
+      "url": "https://leetcode.com/problems/pow-x-n/"
+    },
+    {
+      "lcNumber": 204,
+      "order": 247,
+      "title": "Count Primes",
+      "difficulty": "Medium",
+      "topicId": "math-number-theory",
+      "keyIdea": "Sieve of Eratosthenes",
+      "url": "https://leetcode.com/problems/count-primes/"
+    },
+    {
+      "lcNumber": 172,
+      "order": 248,
+      "title": "Factorial Trailing Zeroes",
+      "difficulty": "Medium",
+      "topicId": "math-number-theory",
+      "keyIdea": "Count factors of 5",
+      "url": "https://leetcode.com/problems/factorial-trailing-zeroes/"
+    },
+    {
+      "lcNumber": 146,
+      "order": 249,
+      "title": "LRU Cache",
+      "difficulty": "Medium",
+      "topicId": "design-lru-lfu",
+      "keyIdea": "Hash map + doubly linked list",
+      "url": "https://leetcode.com/problems/lru-cache/"
+    },
+    {
+      "lcNumber": 622,
+      "order": 250,
+      "title": "Design Circular Queue",
+      "difficulty": "Medium",
+      "topicId": "design-lru-lfu",
+      "keyIdea": "Fixed array + head/size modulo",
+      "url": "https://leetcode.com/problems/design-circular-queue/"
+    },
+    {
+      "lcNumber": 1472,
+      "order": 251,
+      "title": "Design Browser History",
+      "difficulty": "Medium",
+      "topicId": "design-lru-lfu",
+      "keyIdea": "Array/stack with a pointer",
+      "url": "https://leetcode.com/problems/design-browser-history/"
+    },
+    {
+      "lcNumber": 460,
+      "order": 252,
+      "title": "LFU Cache",
+      "difficulty": "Hard",
+      "topicId": "design-lru-lfu",
+      "keyIdea": "Freq to ordered dict; track min freq",
+      "url": "https://leetcode.com/problems/lfu-cache/"
+    }
+  ],
+  "schedule": [
+    {
+      "dayIndex": 0,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "python-big-o-basic-logic",
+      "title": "Python, Big-O & Basic Logic",
+      "focus": "Python for DSA: list/dict/set/deque/heapq, sorted(key=), slicing, reading stdin; Big-O basics (O(1), O(log n), O(n), O(n log n), O(n^2))",
+      "problemIds": [
+        1480,
+        1295,
+        1672,
+        412
+      ]
+    },
+    {
+      "dayIndex": 1,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "python-big-o-basic-logic",
+      "title": "Python, Big-O & Basic Logic",
+      "focus": "Digit and loop logic; always dry-run on paper before coding",
+      "problemIds": [
+        1342,
+        7,
+        8
+      ]
+    },
+    {
+      "dayIndex": 2,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "arrays-matrix",
+      "title": "Arrays & Matrix",
+      "focus": "In-place array tricks: write pointer, swap, fill from the back",
+      "problemIds": [
+        26,
+        27,
+        88,
+        283,
+        121
+      ]
+    },
+    {
+      "dayIndex": 3,
+      "type": "review",
+      "phase": "1 Foundations",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 4,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "arrays-matrix",
+      "title": "Arrays & Matrix",
+      "focus": "Kadane, prefix/suffix products, rotation by reversal, next permutation",
+      "problemIds": [
+        189,
+        238,
+        53,
+        48
+      ]
+    },
+    {
+      "dayIndex": 5,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "arrays-matrix",
+      "title": "Arrays & Matrix",
+      "focus": "Matrix traversal: spiral, rotate, set zeroes; first missing positive",
+      "problemIds": [
+        54,
+        73,
+        31,
+        41
+      ]
+    },
+    {
+      "dayIndex": 6,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "strings",
+      "title": "Strings",
+      "focus": "String basics: palindromes, reverse, subsequence, two pointers on strings",
+      "problemIds": [
+        125,
+        14,
+        344,
+        28
+      ]
+    },
+    {
+      "dayIndex": 7,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "strings",
+      "title": "Strings",
+      "focus": "Substring problems: expand around center; string building",
+      "problemIds": [
+        392,
+        5,
+        647,
+        151
+      ]
+    },
+    {
+      "dayIndex": 8,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "strings",
+      "title": "Strings",
+      "focus": "Parsing and simulation: reverse words, multiply strings, compression, zigzag",
+      "problemIds": [
+        6,
+        43,
+        443,
+        273
+      ]
+    },
+    {
+      "dayIndex": 9,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "hashing",
+      "title": "Hashing",
+      "focus": "HashMap/HashSet basics: lookup, complement (Two Sum), duplicates",
+      "problemIds": [
+        1,
+        217,
+        242,
+        387
+      ]
+    },
+    {
+      "dayIndex": 10,
+      "type": "review",
+      "phase": "1 Foundations",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 11,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "hashing",
+      "title": "Hashing",
+      "focus": "Frequency counting and anagrams (Counter, sorted key)",
+      "problemIds": [
+        49,
+        347,
+        128
+      ]
+    },
+    {
+      "dayIndex": 12,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "hashing",
+      "title": "Hashing",
+      "focus": "Hash + grouping and sequences: group anagrams, longest consecutive, sudoku sets",
+      "problemIds": [
+        36,
+        380,
+        454
+      ]
+    },
+    {
+      "dayIndex": 13,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "hashing",
+      "title": "Hashing",
+      "focus": "Design with hashing: O(1) structures, time-based map; hard: max points on a line",
+      "problemIds": [
+        981,
+        535,
+        149
+      ]
+    },
+    {
+      "dayIndex": 14,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "prefix-sum-subarrays",
+      "title": "Prefix Sum & Subarrays",
+      "focus": "Prefix sum + hashmap trick: sum(i..j) = P[j] - P[i-1]; range queries",
+      "problemIds": [
+        303,
+        560,
+        523,
+        525
+      ]
+    },
+    {
+      "dayIndex": 15,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "prefix-sum-subarrays",
+      "title": "Prefix Sum & Subarrays",
+      "focus": "Remainder/balance tricks (divisible by K, 0/1 as -1/+1), difference array, 2D prefix",
+      "problemIds": [
+        974,
+        1094,
+        304,
+        862
+      ]
+    },
+    {
+      "dayIndex": 16,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "two-pointers",
+      "title": "Two Pointers",
+      "focus": "Opposite-end pointers on sorted arrays (squares, parity, vowels, Two Sum II)",
+      "problemIds": [
+        977,
+        905,
+        345,
+        167
+      ]
+    },
+    {
+      "dayIndex": 17,
+      "type": "review",
+      "phase": "1 Foundations",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 18,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "two-pointers",
+      "title": "Two Pointers",
+      "focus": "k-Sum family: sort + fix one + two pointers; skip duplicates; Dutch flag",
+      "problemIds": [
+        15,
+        11,
+        75
+      ]
+    },
+    {
+      "dayIndex": 19,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "two-pointers",
+      "title": "Two Pointers",
+      "focus": "Container with most water and trapping rain water: why moving the smaller side works",
+      "problemIds": [
+        16,
+        18,
+        42
+      ]
+    },
+    {
+      "dayIndex": 20,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sliding-window",
+      "title": "Sliding Window",
+      "focus": "Fixed-size window: running sum, set of last k",
+      "problemIds": [
+        643,
+        219,
+        3
+      ]
+    },
+    {
+      "dayIndex": 21,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sliding-window",
+      "title": "Sliding Window",
+      "focus": "Variable window (expand right, shrink left): longest / shortest satisfying a condition",
+      "problemIds": [
+        424,
+        567,
+        209
+      ]
+    },
+    {
+      "dayIndex": 22,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sliding-window",
+      "title": "Sliding Window",
+      "focus": "Window + hashmap: permutation, anagrams, replacement trick",
+      "problemIds": [
+        1004,
+        438,
+        904
+      ]
+    },
+    {
+      "dayIndex": 23,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sliding-window",
+      "title": "Sliding Window",
+      "focus": "At-most-K trick, windows with one deletion, minimum window substring",
+      "problemIds": [
+        1493,
+        76
+      ]
+    },
+    {
+      "dayIndex": 24,
+      "type": "mock",
+      "phase": "1 Foundations",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 25,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "binary-search",
+      "title": "Binary Search",
+      "focus": "Classic template (lo/hi/mid), lower/upper bound, insert position, sqrt",
+      "problemIds": [
+        704,
+        35,
+        69,
+        33
+      ]
+    },
+    {
+      "dayIndex": 26,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "binary-search",
+      "title": "Binary Search",
+      "focus": "Rotated sorted array, peak element, 2D matrix, single element in sorted array",
+      "problemIds": [
+        153,
+        34,
+        875
+      ]
+    },
+    {
+      "dayIndex": 27,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "binary-search",
+      "title": "Binary Search",
+      "focus": "Binary search on the ANSWER (Koko, ship capacity): monotonic feasibility check",
+      "problemIds": [
+        1011,
+        74,
+        162
+      ]
+    },
+    {
+      "dayIndex": 28,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "binary-search",
+      "title": "Binary Search",
+      "focus": "Hard: partition-based median of two sorted arrays; split array largest sum",
+      "problemIds": [
+        540,
+        4,
+        410
+      ]
+    },
+    {
+      "dayIndex": 29,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sorting-intervals",
+      "title": "Sorting & Intervals",
+      "focus": "Sorting ideas (merge sort, quick sort), custom comparators, Python key=",
+      "problemIds": [
+        349,
+        1122,
+        56
+      ]
+    },
+    {
+      "dayIndex": 30,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sorting-intervals",
+      "title": "Sorting & Intervals",
+      "focus": "Merge / insert intervals; sort by start vs by end",
+      "problemIds": [
+        57,
+        435,
+        452
+      ]
+    },
+    {
+      "dayIndex": 31,
+      "type": "review",
+      "phase": "1 Foundations",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 32,
+      "type": "study",
+      "phase": "1 Foundations",
+      "topicId": "sorting-intervals",
+      "title": "Sorting & Intervals",
+      "focus": "Greedy on intervals: non-overlapping, arrows; custom sort (largest number)",
+      "problemIds": [
+        912,
+        179
+      ]
+    },
+    {
+      "dayIndex": 33,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "linked-list",
+      "title": "Linked List",
+      "focus": "Pointer basics: reverse list, merge two lists, dummy node",
+      "problemIds": [
+        206,
+        21,
+        141
+      ]
+    },
+    {
+      "dayIndex": 34,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "linked-list",
+      "title": "Linked List",
+      "focus": "Fast and slow pointers: cycle, middle, cycle start",
+      "problemIds": [
+        876,
+        142,
+        19
+      ]
+    },
+    {
+      "dayIndex": 35,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "linked-list",
+      "title": "Linked List",
+      "focus": "Remove nth from end, reorder list, add two numbers, find duplicate (Floyd)",
+      "problemIds": [
+        143,
+        2,
+        287
+      ]
+    },
+    {
+      "dayIndex": 36,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "linked-list",
+      "title": "Linked List",
+      "focus": "Pointer surgery: copy random pointer, sort list (merge sort), reverse k-group",
+      "problemIds": [
+        138,
+        148,
+        25
+      ]
+    },
+    {
+      "dayIndex": 37,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "stack-queue",
+      "title": "Stack & Queue",
+      "focus": "Stack basics: bracket matching, min stack, queue using stacks",
+      "problemIds": [
+        20,
+        232,
+        496
+      ]
+    },
+    {
+      "dayIndex": 38,
+      "type": "review",
+      "phase": "2 Core structures",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 39,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "stack-queue",
+      "title": "Stack & Queue",
+      "focus": "Expression evaluation, car fleet, decode string",
+      "problemIds": [
+        155,
+        150,
+        739
+      ]
+    },
+    {
+      "dayIndex": 40,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "stack-queue",
+      "title": "Stack & Queue",
+      "focus": "Monotonic stack: next greater element, daily temperatures, stock span",
+      "problemIds": [
+        853,
+        503,
+        394
+      ]
+    },
+    {
+      "dayIndex": 41,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "stack-queue",
+      "title": "Stack & Queue",
+      "focus": "Monotonic stack / deque (hard): largest rectangle in histogram, sliding window maximum",
+      "problemIds": [
+        901,
+        84,
+        239
+      ]
+    },
+    {
+      "dayIndex": 42,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "focus": "Recursion thinking: base case, recursion tree, call stack (Fibonacci, power of two)",
+      "problemIds": [
+        509,
+        231,
+        78
+      ]
+    },
+    {
+      "dayIndex": 43,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "focus": "Subsets and permutations template: choose / explore / un-choose",
+      "problemIds": [
+        46,
+        39,
+        40
+      ]
+    },
+    {
+      "dayIndex": 44,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "focus": "Combination sum family; handling duplicates by sorting and skipping",
+      "problemIds": [
+        22,
+        131
+      ]
+    },
+    {
+      "dayIndex": 45,
+      "type": "mock",
+      "phase": "2 Core structures",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 46,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "focus": "Grid and string backtracking: word search, palindrome partitioning, phone letters",
+      "problemIds": [
+        17,
+        79
+      ]
+    },
+    {
+      "dayIndex": 47,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "focus": "Hard backtracking with pruning: N-Queens, Sudoku solver",
+      "problemIds": [
+        51,
+        37
+      ]
+    },
+    {
+      "dayIndex": 48,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "Binary tree basics: DFS recursion (depth, same tree, invert, symmetric)",
+      "problemIds": [
+        104,
+        226,
+        100,
+        101
+      ]
+    },
+    {
+      "dayIndex": 49,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "Height-based recursion (diameter, balanced) + start of BFS level order",
+      "problemIds": [
+        543,
+        110,
+        102,
+        199
+      ]
+    },
+    {
+      "dayIndex": 50,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "BFS variants (zigzag) + BST properties: validate BST, kth smallest",
+      "problemIds": [
+        103,
+        98,
+        230
+      ]
+    },
+    {
+      "dayIndex": 51,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "BST operations: LCA of BST, delete node, insert node",
+      "problemIds": [
+        235,
+        450,
+        701
+      ]
+    },
+    {
+      "dayIndex": 52,
+      "type": "review",
+      "phase": "2 Core structures",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 53,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "LCA of a binary tree, path sum II and III",
+      "problemIds": [
+        236,
+        113,
+        437
+      ]
+    },
+    {
+      "dayIndex": 54,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "Good nodes, construct tree from traversals, flatten to linked list",
+      "problemIds": [
+        1448,
+        105,
+        114
+      ]
+    },
+    {
+      "dayIndex": 55,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "trees-bst",
+      "title": "Trees & BST",
+      "focus": "Hard trees: max path sum, serialize/deserialize, vertical order",
+      "problemIds": [
+        124,
+        297,
+        987
+      ]
+    },
+    {
+      "dayIndex": 56,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "heap-priority-queue",
+      "title": "Heap / Priority Queue",
+      "focus": "Heap basics (heapq): kth largest, K closest points, frequency sort",
+      "problemIds": [
+        703,
+        215,
+        973,
+        451
+      ]
+    },
+    {
+      "dayIndex": 57,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "heap-priority-queue",
+      "title": "Heap / Priority Queue",
+      "focus": "Heap + greedy / scheduling: task scheduler, reorganize string, kth in sorted matrix",
+      "problemIds": [
+        621,
+        767,
+        378
+      ]
+    },
+    {
+      "dayIndex": 58,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "heap-priority-queue",
+      "title": "Heap / Priority Queue",
+      "focus": "Two heaps and K-way merge: median from data stream, merge k lists, design twitter",
+      "problemIds": [
+        355,
+        295,
+        23
+      ]
+    },
+    {
+      "dayIndex": 59,
+      "type": "review",
+      "phase": "2 Core structures",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 60,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "greedy",
+      "title": "Greedy",
+      "focus": "Greedy choice property: assign cookies, jump game I and II",
+      "problemIds": [
+        455,
+        55,
+        45
+      ]
+    },
+    {
+      "dayIndex": 61,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "greedy",
+      "title": "Greedy",
+      "focus": "Gas station, partition labels, hand of straights",
+      "problemIds": [
+        134,
+        763,
+        846
+      ]
+    },
+    {
+      "dayIndex": 62,
+      "type": "study",
+      "phase": "2 Core structures",
+      "topicId": "greedy",
+      "title": "Greedy",
+      "focus": "Valid parenthesis string, candy; proving greedy vs finding counter-examples",
+      "problemIds": [
+        678,
+        135
+      ]
+    },
+    {
+      "dayIndex": 63,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-bfs-dfs-grids",
+      "title": "Graphs: BFS / DFS & Grids",
+      "focus": "Graph representation (adjacency list), DFS/BFS templates, visited set; flood fill, islands",
+      "problemIds": [
+        733,
+        463,
+        200
+      ]
+    },
+    {
+      "dayIndex": 64,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-bfs-dfs-grids",
+      "title": "Graphs: BFS / DFS & Grids",
+      "focus": "Grid graphs: max area of island, multi-source BFS (rotting oranges), boundary DFS (surrounded regions)",
+      "problemIds": [
+        695,
+        994,
+        130
+      ]
+    },
+    {
+      "dayIndex": 65,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-bfs-dfs-grids",
+      "title": "Graphs: BFS / DFS & Grids",
+      "focus": "Pacific-Atlantic, connected components (provinces), bipartite check",
+      "problemIds": [
+        417,
+        547,
+        785
+      ]
+    },
+    {
+      "dayIndex": 66,
+      "type": "mock",
+      "phase": "3 Graphs",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 67,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-bfs-dfs-grids",
+      "title": "Graphs: BFS / DFS & Grids",
+      "focus": "All paths in a DAG, clone graph (DFS with map)",
+      "problemIds": [
+        797,
+        133
+      ]
+    },
+    {
+      "dayIndex": 68,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-bfs-dfs-grids",
+      "title": "Graphs: BFS / DFS & Grids",
+      "focus": "Shortest path in an unweighted graph: binary matrix, Word Ladder",
+      "problemIds": [
+        1091,
+        127
+      ]
+    },
+    {
+      "dayIndex": 69,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-topo-sort-union-find",
+      "title": "Graphs: Topo Sort & Union-Find",
+      "focus": "Topological sort: Kahn's algorithm (BFS) and DFS; Course Schedule I and II",
+      "problemIds": [
+        207,
+        210
+      ]
+    },
+    {
+      "dayIndex": 70,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-topo-sort-union-find",
+      "title": "Graphs: Topo Sort & Union-Find",
+      "focus": "Union-Find (DSU) with path compression: redundant connection, network connectivity",
+      "problemIds": [
+        684,
+        1319
+      ]
+    },
+    {
+      "dayIndex": 71,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-topo-sort-union-find",
+      "title": "Graphs: Topo Sort & Union-Find",
+      "focus": "DSU applications: accounts merge, equality equations",
+      "problemIds": [
+        721,
+        990
+      ]
+    },
+    {
+      "dayIndex": 72,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-topo-sort-union-find",
+      "title": "Graphs: Topo Sort & Union-Find",
+      "focus": "Hard: longest increasing path (DFS + memo), largest component by common factor",
+      "problemIds": [
+        329,
+        952
+      ]
+    },
+    {
+      "dayIndex": 73,
+      "type": "review",
+      "phase": "3 Graphs",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 74,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-shortest-path-mst",
+      "title": "Graphs: Shortest Path & MST",
+      "focus": "Dijkstra with a heap + K-stops variant (Bellman-Ford style): network delay, max probability, cheapest flights",
+      "problemIds": [
+        743,
+        1514,
+        787
+      ]
+    },
+    {
+      "dayIndex": 75,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-shortest-path-mst",
+      "title": "Graphs: Shortest Path & MST",
+      "focus": "Min effort path (Dijkstra on grid); MST with Kruskal/Prim: min cost to connect points",
+      "problemIds": [
+        1631,
+        1584
+      ]
+    },
+    {
+      "dayIndex": 76,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "graphs-shortest-path-mst",
+      "title": "Graphs: Shortest Path & MST",
+      "focus": "Hard: reconstruct itinerary (Euler path), swim in rising water",
+      "problemIds": [
+        332,
+        778
+      ]
+    },
+    {
+      "dayIndex": 77,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "trie",
+      "title": "Trie",
+      "focus": "Trie insert / search / startsWith; replace words",
+      "problemIds": [
+        208,
+        648
+      ]
+    },
+    {
+      "dayIndex": 78,
+      "type": "study",
+      "phase": "3 Graphs",
+      "topicId": "trie",
+      "title": "Trie",
+      "focus": "Trie + DFS: add and search words (wildcard), Word Search II",
+      "problemIds": [
+        211,
+        212
+      ]
+    },
+    {
+      "dayIndex": 79,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-1d-grid",
+      "title": "DP: 1D & Grid",
+      "focus": "DP mindset: recursion, then memo, then table, then space optimisation (Fibonacci family)",
+      "problemIds": [
+        70,
+        746,
+        1137
+      ]
+    },
+    {
+      "dayIndex": 80,
+      "type": "review",
+      "phase": "4 Dynamic Programming",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 81,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-1d-grid",
+      "title": "DP: 1D & Grid",
+      "focus": "Linear DP: house robber I and II, decode ways",
+      "problemIds": [
+        198,
+        213,
+        91
+      ]
+    },
+    {
+      "dayIndex": 82,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-1d-grid",
+      "title": "DP: 1D & Grid",
+      "focus": "Unbounded / coin DP: coin change, word break",
+      "problemIds": [
+        322,
+        139
+      ]
+    },
+    {
+      "dayIndex": 83,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-1d-grid",
+      "title": "DP: 1D & Grid",
+      "focus": "Grid DP: unique paths, minimum path sum",
+      "problemIds": [
+        62,
+        64
+      ]
+    },
+    {
+      "dayIndex": 84,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-1d-grid",
+      "title": "DP: 1D & Grid",
+      "focus": "Maximum product subarray (track max and min); hard: dungeon game",
+      "problemIds": [
+        152,
+        174
+      ]
+    },
+    {
+      "dayIndex": 85,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-knapsack-subsequences",
+      "title": "DP: Knapsack & Subsequences",
+      "focus": "0/1 knapsack: partition equal subset sum, target sum, ones and zeroes",
+      "problemIds": [
+        416,
+        494,
+        474
+      ]
+    },
+    {
+      "dayIndex": 86,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-knapsack-subsequences",
+      "title": "DP: Knapsack & Subsequences",
+      "focus": "Unbounded knapsack: coin change II, combination sum IV (loop order matters)",
+      "problemIds": [
+        518,
+        377
+      ]
+    },
+    {
+      "dayIndex": 87,
+      "type": "mock",
+      "phase": "4 Dynamic Programming",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 88,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-knapsack-subsequences",
+      "title": "DP: Knapsack & Subsequences",
+      "focus": "LIS (O(n^2) then O(n log n)) and LCS",
+      "problemIds": [
+        300,
+        1143
+      ]
+    },
+    {
+      "dayIndex": 89,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-knapsack-subsequences",
+      "title": "DP: Knapsack & Subsequences",
+      "focus": "State-machine DP (stock with cooldown) + Russian doll envelopes",
+      "problemIds": [
+        309,
+        354
+      ]
+    },
+    {
+      "dayIndex": 90,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-knapsack-subsequences",
+      "title": "DP: Knapsack & Subsequences",
+      "focus": "Hard DP: stock IV, maximum profit in job scheduling",
+      "problemIds": [
+        188,
+        1235
+      ]
+    },
+    {
+      "dayIndex": 91,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-strings-advanced",
+      "title": "DP: Strings & Advanced",
+      "focus": "Palindromic subsequence and repeated subarray (2D string DP)",
+      "problemIds": [
+        516,
+        718
+      ]
+    },
+    {
+      "dayIndex": 92,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-strings-advanced",
+      "title": "DP: Strings & Advanced",
+      "focus": "Edit distance, interleaving string",
+      "problemIds": [
+        72,
+        97
+      ]
+    },
+    {
+      "dayIndex": 93,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-strings-advanced",
+      "title": "DP: Strings & Advanced",
+      "focus": "Maximal square, minimum cost for tickets (grid / decision DP)",
+      "problemIds": [
+        221,
+        983
+      ]
+    },
+    {
+      "dayIndex": 94,
+      "type": "review",
+      "phase": "4 Dynamic Programming",
+      "topicId": null,
+      "title": "Weekly Review & Contest",
+      "focus": "Weekly review: attempt the LeetCode weekly contest, redo every starred / Attempted problem from this week, update the Mistake Log.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 95,
+      "type": "study",
+      "phase": "4 Dynamic Programming",
+      "topicId": "dp-strings-advanced",
+      "title": "DP: Strings & Advanced",
+      "focus": "Hard: distinct subsequences, regular expression matching",
+      "problemIds": [
+        115,
+        10
+      ]
+    },
+    {
+      "dayIndex": 96,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "bit-manipulation",
+      "title": "Bit Manipulation",
+      "focus": "Bit basics: AND/OR/XOR, shifts, count set bits; single number with XOR",
+      "problemIds": [
+        136,
+        191,
+        338,
+        371
+      ]
+    },
+    {
+      "dayIndex": 97,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "bit-manipulation",
+      "title": "Bit Manipulation",
+      "focus": "Harder bit tricks: add without +, single number II and III, divide two integers",
+      "problemIds": [
+        137,
+        260,
+        29
+      ]
+    },
+    {
+      "dayIndex": 98,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "math-number-theory",
+      "title": "Math & Number Theory",
+      "focus": "Digits and parity: palindrome number, happy number, plus one",
+      "problemIds": [
+        9,
+        202,
+        66
+      ]
+    },
+    {
+      "dayIndex": 99,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "math-number-theory",
+      "title": "Math & Number Theory",
+      "focus": "Fast exponentiation, sieve of Eratosthenes, trailing zeroes",
+      "problemIds": [
+        50,
+        204,
+        172
+      ]
+    },
+    {
+      "dayIndex": 100,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "design-lru-lfu",
+      "title": "Design (LRU, LFU)",
+      "focus": "LRU cache (hash map + doubly linked list), circular queue",
+      "problemIds": [
+        146,
+        622
+      ]
+    },
+    {
+      "dayIndex": 101,
+      "type": "mock",
+      "phase": "5 Bits, Math, Design",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 102,
+      "type": "study",
+      "phase": "5 Bits, Math, Design",
+      "topicId": "design-lru-lfu",
+      "title": "Design (LRU, LFU)",
+      "focus": "Browser history; LFU cache",
+      "problemIds": [
+        1472,
+        460
+      ]
+    },
+    {
+      "dayIndex": 103,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Revision sprint 1: redo every starred problem in Arrays, Strings, Hashing, Two Pointers, Sliding Window",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 104,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Revision sprint 2: redo starred problems in Binary Search, Linked List, Stack & Queue, Sorting",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 105,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Revision sprint 3: redo starred problems in Trees, Heap, Greedy, Backtracking",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 106,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Revision sprint 4: redo starred Graph and DP problems; write the BFS, DFS, Dijkstra, DSU and DP templates from memory",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 107,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Online-assessment simulation: 2-3 mixed problems in 90 minutes on HackerRank-style stdin/stdout, then an aptitude set",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 108,
+      "type": "mock",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Timed Mock + Review",
+      "focus": "TIMED MOCK: 3 unseen problems (1 Easy, 1 Medium, 1 Medium/Hard) from topics covered so far in 90 minutes, no hints; then 90 minutes reviewing every miss. LeetCode weekly contest if time allows.",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 109,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "CS fundamentals day: OOP, DBMS/SQL, OS, Computer Networks - one-page notes + MCQ practice",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 110,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Weak-topic fix: pick the 3 topics with lowest % on the Dashboard and solve 6 new problems there",
+      "problemIds": []
+    },
+    {
+      "dayIndex": 111,
+      "type": "final",
+      "phase": "6 Revision & Mocks",
+      "topicId": null,
+      "title": "Final Revision & Mocks",
+      "focus": "Hard-problem day + mock interview with a friend (explain aloud, state complexity)",
+      "problemIds": []
+    }
+  ],
+  "companyTiers": [
+    {
+      "tier": "Tier A - Mass recruiters",
+      "examples": "TCS (NQT / Digital), Infosys, Wipro, Cognizant, Capgemini, Accenture",
+      "round": "Aptitude + 1-2 coding questions + CS MCQs",
+      "topics": "Arrays, strings, searching, sorting, hashing, linked lists, stacks - fundamentals, not advanced algorithms",
+      "difficulty": "Easy to easy-Medium",
+      "volume": "Roughly 150-200 well-practised Easy/Medium problems is the commonly quoted range"
+    },
+    {
+      "tier": "Tier B - Mid-size product / startups / GCCs",
+      "examples": "Zoho, Freshworks, smaller product startups, many GCCs",
+      "round": "Online assessment + 1-2 technical rounds",
+      "topics": "Everything in Tier A + linked-list operations, stack/queue, basic tree traversals, HashMap, two pointers, sliding window basics",
+      "difficulty": "Medium (easier side)",
+      "volume": "About 100-150 problems, 4-6 weeks of focused practice (source 2)"
+    },
+    {
+      "tier": "Tier C - Top product",
+      "examples": "Amazon, Microsoft, Google, Flipkart, PhonePe, Uber, Atlassian",
+      "round": "Online assessment + 3-5 rounds (DSA-heavy, then design / behavioural)",
+      "topics": "Everything above + dynamic programming, graphs (BFS/DFS, shortest path), advanced trees, backtracking, greedy",
+      "difficulty": "Medium to Hard",
+      "volume": "About 200-300 problems, 2-3 months (source 2). Tagged sets skew roughly 25% Easy / 50% Medium / 25% Hard (source 4)"
+    }
+  ],
+  "companyFavorites": [
+    {
+      "company": "Google",
+      "topics": "Dynamic programming, graphs",
+      "examples": "LIS, Word Ladder, Unique Paths"
+    },
+    {
+      "company": "Meta",
+      "topics": "Trees, DFS / BFS",
+      "examples": "Number of Islands, Diameter of Binary Tree"
+    },
+    {
+      "company": "Amazon",
+      "topics": "Arrays and strings (sliding window, hash maps), linked lists, trees / BST, graph BFS/DFS, sorting, greedy",
+      "examples": "Two Sum, Merge Intervals, cycle in linked list, LCA, validate BST"
+    },
+    {
+      "company": "Microsoft",
+      "topics": "Binary search, strings",
+      "examples": "Search in Rotated Sorted Array, Group Anagrams"
+    },
+    {
+      "company": "Netflix",
+      "topics": "Sliding window, hashing",
+      "examples": "Longest Substring Without Repeating Characters"
+    },
+    {
+      "company": "Uber",
+      "topics": "Heaps / priority queue",
+      "examples": "Kth Largest Element, IPO"
+    },
+    {
+      "company": "Airbnb",
+      "topics": "Backtracking, recursion",
+      "examples": "Permutations, Combination Sum"
+    },
+    {
+      "company": "Apple",
+      "topics": "Bit manipulation, linked lists",
+      "examples": "Reverse Linked List, Single Number"
+    },
+    {
+      "company": "LinkedIn",
+      "topics": "Topological sort, graph connectivity",
+      "examples": "Course Schedule, Clone Graph"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Do service-based companies like TCS, Infosys, Wipro ask DSA? (Namaste Dev)",
+      "url": "https://namastedev.com/topics/dsa/do-service-based-companies-ask-dsa-questions"
+    },
+    {
+      "title": "DSA minimum you actually need - tiers and problem counts (JobRise)",
+      "url": "https://jobrise.io/en/blog/technical-interview-dsa-minimum/"
+    },
+    {
+      "title": "How much DSA is enough for campus placements (PlacementPreparation.io)",
+      "url": "https://www.placementpreparation.io/blog/how-much-dsa-is-enough-for-campus-placements/"
+    },
+    {
+      "title": "Company-wise DSA topic difficulty map (LeetCode Discuss, community post)",
+      "url": "https://leetcode.com/discuss/post/7015792/2020-2025-company-wise-dsa-interview-top-redj/"
+    },
+    {
+      "title": "Most asked questions recap 2025 (LeetCode Discuss, community post)",
+      "url": "https://leetcode.com/discuss/post/7417074/"
+    },
+    {
+      "title": "Frequently asked DSA questions in Amazon interviews (Medium)",
+      "url": "https://medium.com/@pandyahimanshu09041995/frequently-asked-dsa-questions-in-amazon-interviews-15b4af5dc152"
+    },
+    {
+      "title": "DSA Roadmap 2026: pattern-first preparation (Instahyre)",
+      "url": "https://resources.instahyre.com/blog/dsa-interview-roadmap/"
+    }
+  ],
+  "statusMeaning": {
+    "Not started": "Not attempted yet. Not counted.",
+    "Attempted": "Tried it, or read the solution but cannot yet code it from memory. Not counted.",
+    "Solved": "Can write it from scratch without looking (a hint during the first attempt is fine). Counted.",
+    "Revised": "Redone from scratch on a later day without help. Counted."
+  },
+  "rules": [
+    {
+      "title": "Think first",
+      "text": "25-30 minutes alone, then one hint, then the solution. Close the solution and code it from scratch the same day."
+    },
+    {
+      "title": "Say it out loud",
+      "text": "State brute force, then the optimised idea, then time and space complexity before typing code."
+    },
+    {
+      "title": "Name the pattern",
+      "text": "Write the pattern and its trigger words in the Mistake Log (e.g. 'sorted + pair' -> two pointers)."
+    },
+    {
+      "title": "Redo on schedule",
+      "text": "Anything that needed a hint or the solution gets redone at +1, +7 and +30 days."
+    },
+    {
+      "title": "Carry over",
+      "text": "Unfinished problems roll to the next day. Never skip review days."
+    },
+    {
+      "title": "DP in four steps",
+      "text": "Brute-force recursion, then memo, then table, then space optimisation."
+    },
+    {
+      "title": "Dry-run on paper",
+      "text": "Tiny example plus edge cases: empty input, one element, duplicates."
+    },
+    {
+      "title": "Plain editor sometimes",
+      "text": "Online assessments have no autocomplete; also practise stdin/stdout parsing (HackerRank style)."
+    },
+    {
+      "title": "One list only",
+      "text": "Do not switch problem sheets mid-way."
+    }
+  ],
+  "patternTriggers": [
+    {
+      "trigger": "sorted array + find a pair / triplet",
+      "pattern": "Two pointers"
+    },
+    {
+      "trigger": "longest / shortest subarray or substring with a condition",
+      "pattern": "Sliding window"
+    },
+    {
+      "trigger": "subarray sum equals / divisible by K",
+      "pattern": "Prefix sum + hashmap"
+    },
+    {
+      "trigger": "minimum X such that ... / maximum X that still works",
+      "pattern": "Binary search on the answer"
+    },
+    {
+      "trigger": "next greater / smaller element",
+      "pattern": "Monotonic stack"
+    },
+    {
+      "trigger": "all combinations / subsets / permutations",
+      "pattern": "Backtracking"
+    },
+    {
+      "trigger": "top K / Kth largest / streaming median",
+      "pattern": "Heap"
+    },
+    {
+      "trigger": "shortest path, unweighted grid",
+      "pattern": "BFS"
+    },
+    {
+      "trigger": "shortest path, weighted non-negative",
+      "pattern": "Dijkstra"
+    },
+    {
+      "trigger": "dependencies / ordering / prerequisites",
+      "pattern": "Topological sort"
+    },
+    {
+      "trigger": "connected groups, merging sets",
+      "pattern": "Union-Find"
+    },
+    {
+      "trigger": "count ways / min cost with overlapping subproblems",
+      "pattern": "Dynamic programming"
+    },
+    {
+      "trigger": "prefix lookups over many words",
+      "pattern": "Trie"
+    },
+    {
+      "trigger": "element appearing once among pairs",
+      "pattern": "XOR bit trick"
+    }
+  ]
+}

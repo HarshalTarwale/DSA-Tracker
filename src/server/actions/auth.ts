@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { EnvError } from "@/lib/env";
 import { createSession, destroySession, passwordMatches } from "@/server/auth";
 
 export type LoginState = { error?: string } | undefined;
@@ -25,12 +26,19 @@ export async function loginAction(_prev: LoginState, formData: FormData): Promis
   });
   if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
 
-  if (!passwordMatches(parsed.data.password)) {
-    await new Promise((r) => setTimeout(r, 800));
-    return { error: "Wrong password" };
+  try {
+    if (!passwordMatches(parsed.data.password)) {
+      await new Promise((r) => setTimeout(r, 800));
+      return { error: "Wrong password" };
+    }
+    await createSession();
+  } catch (err) {
+    if (err instanceof EnvError) {
+      console.error(err.message);
+      return { error: `Server setup problem: ${err.problems.join("; ")}. Fix it in the hosting env settings and redeploy.` };
+    }
+    throw err;
   }
-
-  await createSession();
   redirect(safeNext(parsed.data.next));
 }
 

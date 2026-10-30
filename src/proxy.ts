@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { readAuthSecret } from "@/lib/env";
 import { SESSION_COOKIE, verifySessionToken } from "@/server/session";
 
 /**
@@ -8,7 +9,7 @@ import { SESSION_COOKIE, verifySessionToken } from "@/server/session";
 export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
   const token = request.cookies.get(SESSION_COOKIE)?.value;
-  const ok = await verifySessionToken(token, process.env.AUTH_SECRET);
+  const ok = await verifySessionToken(token, readAuthSecret());
 
   if (pathname === "/login") {
     if (ok) return NextResponse.redirect(new URL("/", request.url));

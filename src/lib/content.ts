@@ -92,7 +92,57 @@ export const statusMeaning = seed.statusMeaning;
 export const rules = seed.rules;
 export const patternTriggers = seed.patternTriggers;
 
-export const PLAN_DAYS = seed.meta.planDays;
 export const TIMEZONE = seed.meta.timezone;
-export const DEFAULT_START_DATE = seed.meta.defaultStartDate;
-export const DEFAULT_DAILY_HOURS = seed.meta.defaultDailyHours;
+
+/** Main plan: 1 Dec 2026 → 1 Apr 2027, then a practice phase to 30 Jun 2027. */
+export const DEFAULT_START_DATE = "2026-12-01";
+export const DEFAULT_END_DATE = "2027-04-01";
+export const DEFAULT_PRACTICE_END_DATE = "2027-06-30";
+
+export const topics = [...seed.topics].sort((a, b) => a.order - b.order);
+export const topicById = new Map(topics.map((t) => [t.id, t]));
+
+export interface CuratedProblem {
+  lcNumber: number;
+  slug: string;
+  title: string;
+  url: string;
+  difficulty: "easy" | "medium" | "hard";
+  topicId: string;
+  keyIdea: string;
+  order: number;
+  /** 0-based study day within its topic in the original plan */
+  topicDay: number;
+}
+
+export function slugFromUrl(url: string): string {
+  const m = url.match(/leetcode\.com\/problems\/([^/?#]+)/);
+  return m ? m[1] : url;
+}
+
+function buildCurated(): CuratedProblem[] {
+  const dayOfLc = new Map<number, number>();
+  const seen = new Map<string, number>();
+  for (const d of seed.schedule) {
+    if (d.type !== "study" || !d.topicId) continue;
+    const k = seen.get(d.topicId) ?? 0;
+    for (const lc of d.problemIds) dayOfLc.set(lc, k);
+    seen.set(d.topicId, k + 1);
+  }
+  return [...seed.problems]
+    .sort((a, b) => a.order - b.order)
+    .map((p) => ({
+      lcNumber: p.lcNumber,
+      slug: slugFromUrl(p.url),
+      title: p.title,
+      url: p.url,
+      difficulty: p.difficulty.toLowerCase() as CuratedProblem["difficulty"],
+      topicId: p.topicId,
+      keyIdea: p.keyIdea,
+      order: p.order,
+      topicDay: dayOfLc.get(p.lcNumber) ?? 0,
+    }));
+}
+
+export const curatedProblems = buildCurated();
+export const curatedBySlug = new Map(curatedProblems.map((p) => [p.slug, p]));

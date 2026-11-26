@@ -10,7 +10,7 @@ import { isActive, NAV } from "./nav";
 
 export const SIDEBAR_COOKIE = "dsa_sidebar";
 
-export function Sidebar({ initialCollapsed, revisionCount }: { initialCollapsed: boolean; revisionCount: number }) {
+export function Sidebar({ initialCollapsed }: { initialCollapsed: boolean }) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(initialCollapsed);
 
@@ -36,7 +36,6 @@ export function Sidebar({ initialCollapsed, revisionCount }: { initialCollapsed:
       <nav aria-label="Main" className="flex flex-1 flex-col gap-0.5 overflow-y-auto px-2 py-2">
         {NAV.map((item) => {
           const active = isActive(pathname, item.href);
-          const badge = item.href === "/revision" && revisionCount > 0 ? revisionCount : null;
           const link = (
             <Link
               key={item.href}
@@ -52,17 +51,6 @@ export function Sidebar({ initialCollapsed, revisionCount }: { initialCollapsed:
             >
               <item.icon className={cn("size-4 shrink-0", active && "text-accent")} />
               {!collapsed && <span className="flex-1">{item.label}</span>}
-              {badge !== null && (
-                <span
-                  className={cn(
-                    "num rounded-full bg-medium/20 px-1.5 text-[11px] leading-5 font-medium text-medium",
-                    collapsed && "absolute top-0.5 right-1 px-1 text-[10px] leading-4",
-                  )}
-                  aria-label={`${badge} redos due`}
-                >
-                  {badge}
-                </span>
-              )}
             </Link>
           );
           return collapsed ? (

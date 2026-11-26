@@ -8,6 +8,8 @@ import { SESSION_COOKIE, verifySessionToken } from "@/server/session";
  */
 export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+  // The cron route authenticates with CRON_SECRET instead of the session cookie.
+  if (pathname.startsWith("/api/cron/")) return NextResponse.next();
   const token = request.cookies.get(SESSION_COOKIE)?.value;
   const ok = await verifySessionToken(token, readAuthSecret());
 

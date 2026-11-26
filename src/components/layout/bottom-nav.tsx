@@ -6,12 +6,11 @@ import { useState } from "react";
 import { MenuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { TimerPill } from "@/components/timer/timer-controls";
 import { isActive, MOBILE_TABS, NAV } from "./nav";
 
 const SHORT: Record<string, string> = { "/": "Home" };
 
-export function BottomNav({ revisionCount }: { revisionCount: number }) {
+export function BottomNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const tabs = NAV.filter((n) => MOBILE_TABS.includes(n.href));
@@ -20,9 +19,6 @@ export function BottomNav({ revisionCount }: { revisionCount: number }) {
 
   return (
     <>
-      <div className="fixed inset-x-0 bottom-16 z-40 flex justify-center px-4 sm:hidden pb-safe">
-        <TimerPill />
-      </div>
       <nav
         aria-label="Main"
         className="pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 backdrop-blur md:hidden"
@@ -30,7 +26,6 @@ export function BottomNav({ revisionCount }: { revisionCount: number }) {
         <div className="grid h-16 grid-cols-5">
           {tabs.map((item) => {
             const active = isActive(pathname, item.href);
-            const badge = item.href === "/revision" && revisionCount > 0 ? revisionCount : null;
             return (
               <Link
                 key={item.href}
@@ -43,11 +38,6 @@ export function BottomNav({ revisionCount }: { revisionCount: number }) {
               >
                 <span className="relative">
                   <item.icon className={cn("size-5", active && "text-accent")} />
-                  {badge !== null && (
-                    <span className="num absolute -top-1.5 -right-3 rounded-full bg-medium px-1 text-[10px] leading-4 font-semibold text-black">
-                      {badge}
-                    </span>
-                  )}
                 </span>
                 {SHORT[item.href] ?? item.label}
               </Link>

@@ -1,26 +1,23 @@
 import type { Metadata } from "next";
-import { PLAN_DAYS } from "@/lib/content";
-import { getSettings } from "@/server/queries/settings";
+import { getSettings } from "@/server/data";
 import { PageHeader } from "@/components/shared/page";
-import { DangerPanel, ExportPanel, ImportPanel, PlanSettings } from "@/components/settings/settings-panels";
+import { AccountActions, AccountsForm, DatesForm } from "@/components/settings/settings-forms";
 
 export const metadata: Metadata = { title: "Settings" };
 export const dynamic = "force-dynamic";
 
 export default async function SettingsPage() {
-  const settings = await getSettings();
+  const s = await getSettings();
   return (
     <div className="flex max-w-3xl flex-col gap-6">
       <PageHeader title="Settings" />
-      <PlanSettings
-        key={`${settings.startDate}:${settings.dailyHours}`}
-        startDate={settings.startDate}
-        dailyHours={settings.dailyHours}
-        planDays={PLAN_DAYS}
+      <AccountsForm
+        key={`${s.leetcodeUsername}:${s.hackerrankUsername}`}
+        leetcode={s.leetcodeUsername}
+        hackerrank={s.hackerrankUsername}
       />
-      <ExportPanel />
-      <ImportPanel />
-      <DangerPanel />
+      <DatesForm key={`${s.startDate}:${s.endDate}:${s.practiceEndDate}`} startDate={s.startDate} endDate={s.endDate} practiceEndDate={s.practiceEndDate} />
+      <AccountActions />
     </div>
   );
 }

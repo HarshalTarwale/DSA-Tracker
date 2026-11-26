@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { formatDate } from "@/lib/dates";
-import { heatLevel, type HeatCell } from "@/lib/metrics";
+import { heatLevel, type HeatCell } from "@/lib/progress";
 import { cn } from "@/lib/utils";
 
 const LEVEL = [
